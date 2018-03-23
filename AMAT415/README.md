@@ -1,6 +1,6 @@
 # Applied Mathematics 415 - Mathematical Models
 
-**Topics covered**
+## **Topics covered**
 
 1. Real and complex integrals
    - limits, continuity and review of complex numbers
