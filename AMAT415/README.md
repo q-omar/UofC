@@ -1,6 +1,8 @@
 # Applied Mathematics 415 - Mathematical Models
 
 **Topics covered**
+1. First list item
+   - First nested list item
 
 
 1. Real and complex integrals
