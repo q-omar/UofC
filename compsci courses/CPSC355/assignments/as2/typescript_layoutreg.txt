@@ -1,0 +1,450 @@
+Script started on 2018-02-09 15:09:42-0700
+]0;soquresh@csa1:~/Documents/cpsc355/as2soquresh@csa1:~/Documents/cpsc355/as2$ m4 assign2a.e[Kasm > assigne[K2a.s
+]0;soquresh@csa1:~/Documents/cpsc355/as2soquresh@csa1:~/Documents/cpsc355/as2$ gcc - [Ko assign2aexe assign2a.s
+assign2a.s: Assembler messages:
+assign2a.s: Warning: end of file in comment; newline inserted
+]0;soquresh@csa1:~/Documents/cpsc355/as2soquresh@csa1:~/Documents/cpsc355/as2$ ./assign2aexe
+Multiplicand = -16384 
+Multiplicand(hex) = 0xFFFFC000
+
+Multiplier = 47 
+Multiplier(hex) = 0x0000002F
+
+Final product = 16383 
+Final product(hex) = 0x00003FFF
+
+Multiplier = -770048
+Multiplier(hex) = 0xFFF44000
+Multiplier Extended = -770048
+Multiplier Extended (hex) = FFFFFFFFFFF44000
+
+]0;soquresh@csa1:~/Documents/cpsc355/as2soquresh@csa1:~/Documents/cpsc355/as2$ gdb assigne[K2aexe
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign2aexe...(no debugging symbols found)...done.
+(gdb) layout reg
+[?1049h[1;22r(B[m[4l[?7h[?1h=[H[2J[15d(B[0;7mexec No process In:                                                     L??   PC: ?? [16;1H(B[m[H   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;4H(0[0mx(B[85G(0[0mx(B[3;4H(0[0mx(B[85G(0[0mx(B[4;4H(0[0mx(B[85G(0[0mx(B[5;4H(0[0mx(B[85G(0[0mx(B[6;4H(0[0mx(B[85G(0[0mx(B[7;4H(0[0mx(B[85G(0[0mx(B[8;4H(0[0mx(B[85G(0[0mx(B[9;4H(0[0mx(B[85G(0[0mx(B[10;4H(0[0mx(B[85G(0[0mx(B[11;4H(0[0mx(B[85G(0[0mx(B[12;4H(0[0mx(B[85G(0[0mx(B[13;4H(0[0mx(B[85G(0[0mx(B[14;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;4H(0[0m(B[8;21H[ No Source Available ][8;21H[23X[H   [8;21H[ No Source Available ][H[8;44H[?1h=[16d[H[2J   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;4H(0[0mx(B[85G(0[0mx(B[3;4H(0[0mx(B[85G(0[0mx(B[4;4H(0[0mx(B[85G(0[0mx(B[5;4H(0[0mx(B[85G(0[0mx(B[6;4H(0[0mx(B[85G(0[0mx(B[7;4H(0[0mx(B[85G(0[0mx(B[8;4H(0[0mx(B[8;21H(0[0m(B[ No Source Available ][85G(0[0mx(B[9;4H(0[0mx(B[85G(0[0mx(B[10;4H(0[0mx(B[85G(0[0mx(B[11;4H(0[0mx(B[85G(0[0mx(B[12;4H(0[0mx(B[85G(0[0mx(B[13;4H(0[0mx(B[85G(0[0mx(B[14;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[15;1H(0[0m(B[0;7mexec No process In:                                                     L??   PC: ?? [1;1H(B[m[8;44H[15d[H   (0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[2;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[3;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[4;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[5;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[6;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[7;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[8;4H(0[0;1;7mx(B(B[m[8;21H(0[0;1;7m(B(B[m[23X[85G(0[0;1;7mx(B(B[m[9;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[10;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[11;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[12;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[13;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[14;4H(0[0;1;7mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B(B[m[1;4H(0[0;1;7m(B(B[m[8;21H[ No Source Available ][H[16d[7d   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[8;4H(0[0mx(B[8;21H(0[0m(B[23X[85G(0[0mx(B[9;4H(0[0mx(B[85G(0[0mx(B[10;4H(0[0mx(B[85G(0[0mx(B[11;4H(0[0mx(B[85G(0[0mx(B[12;4H(0[0mx(B[85G(0[0mx(B[13;4H(0[0mx(B[85G(0[0mx(B[14;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[7;4H(0[0m(B[H(0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;1H(0[0mx(B   [85G(0[0mx(B[3;1H(0[0mx(B   [85G(0[0mx(B[4;1H(0[0mx(B   [85G(0[0mx(B[5;1H(0[0mx(B   [85G(0[0mx(B[6;1H(0[0mx(B   [85G(0[0mx(B[7;1H(0[0mmqqq(B[85G(0[0mj(B[1;1H(0[0m(B[15d[7;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[8;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[9;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[10;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[11;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[12;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[13;4H(0[0;1;7mx(B(B[m[85G(0[0;1;7mx(B(B[m[14;4H(0[0;1;7mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B(B[m[7;4H(0[0;1;7m(B(B[m
+[C0x400698 <main>[8;37Hstp    x29, x30, [sp, #-16]!
+[5G0x40069c <main+4>[9;37Hmov    x29, x30
+[5G0x4006a0 <initialprinting>[37Gmov    w28, #0x0[10;76H// #0
+[5G0x4006a4 <initialprinting+4>    mov    w23, #0x0[11;76H// #0
+[5G0x4006a8 <initialprinting+8>    mov    w19, #0xffffc000[12;76H// #-1638
+[5G0x4006ac <initialprinting+12>   sxtw   x20, w19[85G[7d   [14d[7d(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;1H(0[0m(B[4;11H[ Register Values Unavailable ][16d(gdb) b	main[7d   [12db+
+
+
+
+
+Breakpoint 1 at 0x4006a8
+(gdb) b	loop
+Breakpoint 2 at 0x4006f8
+(gdb) b	test
+Breakpoint 3 at 0x400720
+(gdb) b	pos[16d[2M[21dBreakpoint 4 at 0x400708
+(gdb) b	endprinting[16d[2M[21dBreakpoint 5 at 0x400734
+(gdb) r[16d[2M[21dStarting program: /home/ugc/soquresh/Documents/cpsc355/as2/assign2aexe
+[7;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[13;85H(0[0;1;7m(B(B[m[A  [7d[12db+
+
+
+(B[0;7mnative process 10627 In:
+(B[m[22d[13;85H[A  [7d[12db+
+
+
+
+[22d[13;85H[A  [7d[12db+
+
+
+
+[22d[13;85H[A  [7d[12db+
+
+
+
+[22d[13;85H[A  [7d[12db+
+
+
+
+[22d[12d  [7d[12dB+
+
+[15;26H(B[0;7minitialprinting[15;67HL??   PC: 0x4006a8
+(B[m[8;11Ha0 <initialprinting>[37Gmov    w28, #0x0            [8;76H// #0[9;11Ha4 <initialprinting+4>[9;44Hw23, #0x0[9;76H// #0
+[5G(B[0;7m0x4006a8 <initialprinting+8>    mov    w19, #0xffffc000                // #-1638[11;12H(B[mc[11;31H12>   sxtw   x20, w19 [11;76H     [12;11Hb0[12;31H16>   adrp   x0, 0x400000    [12;76H         [13;11Hb4[13;31H20>   add    x0, x0, #0x5a4[85G[A  [7d
+
+
+B+>
+
+
+
+[10d   [7d
+
+
+B+>
+
+
+
+[1;4HRegister group: general[4;11H[31X
+
+
+(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;27H(0[0m(B
+[Cx0[2;17H0x1	 1
+[Cx1[3;17H0xfffffffff268   281474976707176
+[Cx2[4;17H0xfffffffff278   281474976707192
+[Cx3[5;17H0x400698 4195992
+[Cx4[6;17H0xfffffffff180   281474976706944[16d[2M[21dBreakpoint 1, 0x00000000004006a8 in initialprinting ()
+(gdb) display/d	$2 w20[16d[2M[21d1: /d $w20 = 0
+(gdb) display/d	$w19[16d[2M[21d2: /d $w19 = 4196216
+(gdb) display/d	$w28[16d[2M[21d3: /d $w28 = 0
+(gdb) step[16d[3M
+
+
+
+Single stepping until exit from function initialprinting,
+which has no line number information.
+[15;26H(B[0;7m__printf       [15;61HL33   PC: 0xffffb7e52eac
+(B[m[7;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[8;7H(0[0;1;7m(B(B[mffffb7e52ea8 <__printf> [37Gstp    x29, x30, [sp, #-304]![8;76H     
+[5G(B[0;7m0xffffb7e52eac <__printf+4>     adrp   x8, 0xffffb7f9d000 <__libio_codecvt+176>
+[5G(B[m0xffffb7e52eb0 <__printf+8>     mov    x29, sp[34X
+[7Gffffb7e52eb4 <__printf+12>    ldr    x8, [x8, #3856]
+[7Gffffb7e52eb8 <__printf+16>    add    x9, x29, #0xf0
+[7Gffffb7e52ebc <__printf+20>    str    x1, [x29, #248][85G[7d   
+
+
+   [7d
+
+  >[14d[9d   [7d
+
+  >[14d[H
+[C(B[0;7mx0             0x4005a4 4195748                                                   [2;33H(B[m
+[C(B[0;7mx1             0xffffffffffffc000       -16384                                    [3;48H(B[m
+[C(B[0;7mx2             0xffffffffffffc000       -16384                                    [4;48H(B[m[16d[3M
+
+
+__printf (
+[5Gformat=0x4005a4 <multiplicand> "Multiplicand = %d \nMultiplicand(hex) = 0x%08X\n"[21;1H) at printf.c:33
+[16d[M[21d1: /d $w20 = -16384
+---Type <return> to continue, or q <return> to quit---step[16d[2M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) step[16d[M[22d[15;62H(B[0;7m28[83Gb0
+(B[m[9;5H0xffffb7e52eac <__printf+4>     adrp   x8, 0xffffb7f9d000 <__libio_codecvt+176>
+[5G(B[0;7m0xffffb7e52eb0 <__printf+8>     mov    x29, sp[85G(B[m[A   [7d
+
+
+  >
+
+
+
+[H
+[Cx0             0x4005a4 4195748[51X
+[Cx1             0xffffffffffffc000       -16384[36X
+[Cx2             0xffffffffffffc000       -16384[36X[22d[16d[M[21d1: /d $w20 = -16384
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) step[16d[M[22d[15;62H(B[0;7m33[84G4
+(B[m[10;5H0xffffb7e52eb0 <__printf+8>     mov    x29, sp
+[5G(B[0;7m0xffffb7e52eb4 <__printf+12>    ldr    x8, [x8, #3856][85G(B[m[A   [7d
+
+
+
+  >
+
+
+[22d[16d[M[21d1: /d $w20 = -16384
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) step[16d[M[22d[15;63H(B[0;7m2[84G8
+(B[m[8;17Hb0[8;29H+8>     mov[8;49Hsp[15X[9;17Hb4[9;30H12>    ldr [48G[x8, #3856][25X
+[5G(B[0;7m0xffffb7e52eb8 <__printf+16>    add    x9, x29, #0xf0
+[5G(B[m0xffffb7e52ebc <__printf+20>    str    x1, [x29, #248][12;17Hc0[12;30H24>    mov    x1, x0        [13;17Hc4[13;31H8>    add    x0, x29, #0x130[85G[11;3H [7d
+
+
+  >
+
+
+
+[10d   [7d
+
+
+  >
+
+
+
+[22d[16d[M[21d1: /d $w20 = -16384
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) step[16d[M[22d[15;62H(B[0;7m28[84Gc
+(B[m[10;5H0xffffb7e52eb8 <__printf+16>    add    x9, x29, #0xf0
+[5G(B[0;7m0xffffb7e52ebc <__printf+20>    str    x1, [x29, #248][85G(B[m[A   [7d
+
+
+
+  >
+
+
+[22d[16d[M[21d1: /d $w20 = -16384
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) c[16d[2M[21dContinuing.
+Multiplicand = -16384 
+Multiplicand(hex) = 0xFFFFC000
+
+Multiplier = 47 
+Multiplier(hex) = 0x0000002F
+[15;26H(B[0;7mtest    [15;61H      L??   PC: 0x400720
+(B[m[8;5H(B[0;7m0x400720 <test>         cmp    w23, #0x20(B[m     
+[7G400724 <test+4>       b.lt   0x4006f8 <loop>  // b.tstop
+[7G400728 <test+8>       cmp    w25, #0x1             
+[5G0x40072c <test+12>      b.eq   0x400730 <sub>  // b.none
+[7G400730 <sub>          sub    w28, w28, w19 
+[7G400734 <endprinting>  sxtw   x22, w28[15X[85G[11;3H [7d
+B+>[13db+
+[8d   [13d  [7d
+B+>[13db+
+[H
+[C(B[0;7mx0             0x2f     47                                                        [2;28H(B[m
+[C(B[0;7mx1             0x0      0                                                         [3;27H(B[m
+[C(B[0;7mx2             0xd5c74c4908ae7400       -3042379146703506432                      [4;62H(B[m
+[C(B[0;7mx3             0x0      0                                                         [5;27H(B[m
+[C(B[0;7mx4             0x0      0                                                         [6;27H(B[m[16d[2M[21dBreakpoint 3, 0x0000000000400720 in test ()
+[16d[M[21d1: /d $w20 = 47
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mloop[82G6f8
+(B[m[8;10H(B[0;7m6f8 <loop[8;29Hand[38G6, w20, #0x1[9;10H(B[m6fc <loop[9;29Hcmp    w26, #0x1[18X[10;11H00 <loop[10;29Hb.ne   0x400708 <pos>  // b.any[11;11H04 <loop[11;29Hadd    w28, w28, w19            [12;11H08 <pos[12;29Hand[38G6[46G#0x1[13;11H0c <pos+4>        lsl    w26, w26, #31[85G[8d   [13d  [7d
+B+>
+
+
+
+b+
+
+[8d   
+
+
+
+  [7d
+B+>
+
+
+
+b+
+
+[H
+[Cx0             0x2f     47[56X
+[Cx1             0x0      0[57X
+[Cx2             0xd5c74c4908ae7400       -3042379146703506432[22X
+[Cx3             0x0      0[57X
+[Cx4             0x0      0[57X[16d[2M[21dBreakpoint 2, 0x00000000004006f8 in loop ()
+[16d[M[21d1: /d $w20 = 47
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 0
+(gdb) c[16d[2M[21dContinuing.
+[8d   
+
+
+
+  [7d
+B+>
+
+
+
+B+
+
+[15;26H(B[0;7mpos [82G70
+(B[m[8;10H(B[0;7m708 <pos> [8;43H8[9;10H(B[m70c <pos+4> [29Glsl[9;41Hw26, #31[10;11H10 <pos+8> [29Glsr    w20, w20, #1            [11;11H14 <pos+12> [29Gorr[38G0, w26, w20[12;11H1	s+16>[12;30Hsr[38G8[12;47H1  [13;11H1	s+20>[29Gadd[38G3, w23, #0x1[85G[8d   
+
+
+
+  [7d
+B+>[14d[8d   [A
+B+>[14d
+
+[2M[21dBreakpoint 4, 0x0000000000400708 in pos ()
+[16d[M[21d1: /d $w20 = 47
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294950912
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mtest[83G20
+(B[m[8;11H(B[0;7m20 <test>[8;29Hcmp[38G3, #0x20(B[m    [9;11H24 <test+4>[29Gb.lt   0x4006f8 <loop>  // b.tstop[10;11H28 <test+8>[29Gcmp[38G5, #0x1   [11;11H2c <test+12>[29Gb.eq   0x400730 <sub>  // b.none[12;11H30 <sub>   [29Gsub[12;46Hw19[13;11H34 <endprinting>  sxtw   x22, w28      [85G[8d   [A
+B+>[13db+
+[8d   [13d  [7d
+B+>[13db+
+
+
+[2M[21dBreakpoint 3, 0x0000000000400720 in test ()
+[16d[M[21d1: /d $w20 = 23
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294959104
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mloop[82G6f8
+(B[m[8;10H(B[0;7m6f8 <loop[8;29Hand[38G6, w20, #0x1[9;10H(B[m6fc <loop[9;29Hcmp    w26, #0x1[18X[10;11H00 <loop[10;29Hb.ne   0x400708 <pos>  // b.any[11;11H04 <loop[11;29Hadd    w28, w28, w19            [12;11H08 <pos[12;29Hand[38G6[46G#0x1[13;11H0c <pos+4>        lsl    w26, w26, #31[85G[8d   [13d  [7d
+B+>
+
+
+
+B+
+
+[8d   
+
+
+
+  [7d
+B+>
+
+
+
+B+
+
+
+
+[2M[21dBreakpoint 2, 0x00000000004006f8 in loop ()
+[16d[M[21d1: /d $w20 = 23
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294959104
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mpos [82G70
+(B[m[8;10H(B[0;7m708 <pos> [8;43H8[9;10H(B[m70c <pos+4> [29Glsl[9;41Hw26, #31[10;11H10 <pos+8> [29Glsr    w20, w20, #1            [11;11H14 <pos+12> [29Gorr[38G0, w26, w20[12;11H1	s+16>[12;30Hsr[38G8[12;47H1  [13;11H1	s+20>[29Gadd[38G3, w23, #0x1[85G[8d   
+
+
+
+  [7d
+B+>[14d[8d   [A
+B+>[14d
+
+[2M[21dBreakpoint 4, 0x0000000000400708 in pos ()
+[16d[M[21d1: /d $w20 = 23
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294942720
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mtest[83G20
+(B[m[8;11H(B[0;7m20 <test>[8;29Hcmp[38G3, #0x20(B[m    [9;11H24 <test+4>[29Gb.lt   0x4006f8 <loop>  // b.tstop[10;11H28 <test+8>[29Gcmp[38G5, #0x1   [11;11H2c <test+12>[29Gb.eq   0x400730 <sub>  // b.none[12;11H30 <sub>   [29Gsub[12;46Hw19[13;11H34 <endprinting>  sxtw   x22, w28      [85G[8d   [A
+B+>[13db+
+[8d   [13d  [7d
+B+>[13db+
+
+
+[2M[21dBreakpoint 3, 0x0000000000400720 in test ()
+[16d[M[21d1: /d $w20 = 11
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294955008
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mloop[82G6f8
+(B[m[8;10H(B[0;7m6f8 <loop[8;29Hand[38G6, w20, #0x1[9;10H(B[m6fc <loop[9;29Hcmp    w26, #0x1[18X[10;11H00 <loop[10;29Hb.ne   0x400708 <pos>  // b.any[11;11H04 <loop[11;29Hadd    w28, w28, w19            [12;11H08 <pos[12;29Hand[38G6[46G#0x1[13;11H0c <pos+4>        lsl    w26, w26, #31[85G[8d   [13d  [7d
+B+>
+
+
+
+B+
+
+[8d   
+
+
+
+  [7d
+B+>
+
+
+
+B+
+
+
+
+[2M[21dBreakpoint 2, 0x00000000004006f8 in loop ()
+[16d[M[21d1: /d $w20 = 11
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294955008
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mpos [82G70
+(B[m[8;10H(B[0;7m708 <pos> [8;43H8[9;10H(B[m70c <pos+4> [29Glsl[9;41Hw26, #31[10;11H10 <pos+8> [29Glsr    w20, w20, #1            [11;11H14 <pos+12> [29Gorr[38G0, w26, w20[12;11H1	s+16>[12;30Hsr[38G8[12;47H1  [13;11H1	s+20>[29Gadd[38G3, w23, #0x1[85G[8d   
+
+
+
+  [7d
+B+>[14d[8d   [A
+B+>[14d
+
+[2M[21dBreakpoint 4, 0x0000000000400708 in pos ()
+[16d[M[21d1: /d $w20 = 11
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294938624
+(gdb) step[16d[3M
+
+
+
+Single stepping until exit from function pos,
+which has no line number information.
+[15;26H(B[0;7mtest[83G20
+(B[m[8;11H(B[0;7m20 <test>[8;29Hcmp[38G3, #0x20(B[m    [9;11H24 <test+4>[29Gb.lt   0x4006f8 <loop>  // b.tstop[10;11H28 <test+8>[29Gcmp[38G5, #0x1   [11;11H2c <test+12>[29Gb.eq   0x400730 <sub>  // b.none[12;11H30 <sub>   [29Gsub[12;46Hw19[13;11H34 <endprinting>  sxtw   x22, w28      [85G[8d   [A
+B+>[13db+
+[8d   [13d  [7d
+B+>[13db+
+
+
+[2M[21dBreakpoint 3, 0x0000000000400720 in test ()
+[16d[M[21d1: /d $w20 = 5
+[16d[M[21d2: /d $w19 = 4294950912
+---Type <return> to continue, or q <return> to quit---step[16d[2M[21d3: /d $w28 = 4294952960
+(gdb) step[16d[3M
+
+
+
+Single stepping until exit from function test,
+which has no line number information.
+[15;26H(B[0;7mloop[82G6f8
+(B[m[8;10H(B[0;7m6f8 <loop[8;29Hand[38G6, w20, #0x1[9;10H(B[m6fc <loop[9;29Hcmp    w26, #0x1[18X[10;11H00 <loop[10;29Hb.ne   0x400708 <pos>  // b.any[11;11H04 <loop[11;29Hadd    w28, w28, w19            [12;11H08 <pos[12;29Hand[38G6[46G#0x1[13;11H0c <pos+4>        lsl    w26, w26, #31[85G[8d   [13d  [7d
+B+>
+
+
+
+B+
+
+[8d   
+
+
+
+  [7d
+B+>
+
+
+
+B+
+
+
+
+[2M[21dBreakpoint 2, 0x00000000004006f8 in loop ()
+[16d[M[21d1: /d $w20 = 5
+[16d[M[21d2: /d $w19 = 4294950912
+---Type <return> to continue, or q <return> to quit---c[16d[2M[21d3: /d $w28 = 4294952960
+(gdb) c[16d[2M[21dContinuing.
+[15;26H(B[0;7mpos [82G70
+(B[m[8;10H(B[0;7m708 <pos> [8;43H8[9;10H(B[m70c <pos+4> [29Glsl[9;41Hw26, #31[10;11H10 <pos+8> [29Glsr    w20, w20, #1            [11;11H14 <pos+12> [29Gorr[38G0, w26, w20[12;11H1	s+16>[12;30Hsr[38G8[12;47H1  [13;11H1	s+20>[29Gadd[38G3, w23, #0x1[85G[8d   
+
+
+
+  [7d
+B+>[14d[8d   [A
+B+>[14d
+
+[2M[21dBreakpoint 4, 0x0000000000400708 in pos ()
+[16d[M[21d1: /d $w20 = 5
+[16d[M[21d2: /d $w19 = 4294950912
+[16d[M[21d3: /d $w28 = 4294936576
+(gdb) quit[16d[M[22d[16d3: /d $w28 = 4294936576
+(gdb) quit[K
+A debugging session is active.
+[K
+[8G[1K	Inferior 1 [process 10627] will be killed.
+[K
+Quit anyway? (y or n) y[22;1H[?1049l[?1l>]0;soquresh@csa1:~/Documents/cpsc355/as2soquresh@csa1:~/Documents/cpsc355/as2$ exit
+exit
+
+Script done on 2018-02-09 15:11:25-0700

@@ -4,4 +4,4 @@ view report: https://goo.gl/gw3vuU
 
 refraction seismic data set interpretation: 
 
-![ScreenShot](matlab_implementation/interpretated_ref.png)
+![ScreenShot](matlab/interpretated_ref.png)

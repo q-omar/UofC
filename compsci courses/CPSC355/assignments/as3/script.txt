@@ -1,0 +1,2705 @@
+Script started on 2018-02-26 12:01:11-0700
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ m4 assign3.asm > assign2[K3.s
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ gcc -o assign3 assign3.s
+assign3.s: Assembler messages:
+assign3.s: Warning: end of file in comment; newline inserted
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ ./assign3
+
+Unsorted Array:
+v[0] = 359
+v[1] = 966
+v[2] = 105
+v[3] = 115
+v[4] = 81
+v[5] = 255
+v[6] = 74
+v[7] = 236
+v[8] = 809
+v[9] = 205
+v[10] = 186
+v[11] = 939
+v[12] = 498
+v[13] = 763
+v[14] = 483
+v[15] = 326
+v[16] = 124
+v[17] = 706
+v[18] = 84
+v[19] = 1016
+v[20] = 795
+v[21] = 488
+v[22] = 487
+v[23] = 909
+v[24] = 886
+v[25] = 346
+v[26] = 302
+v[27] = 611
+v[28] = 563
+v[29] = 927
+v[30] = 201
+v[31] = 922
+v[32] = 870
+v[33] = 306
+v[34] = 13
+v[35] = 951
+v[36] = 561
+v[37] = 88
+v[38] = 163
+v[39] = 346
+v[40] = 293
+v[41] = 349
+v[42] = 261
+v[43] = 791
+v[44] = 88
+v[45] = 745
+v[46] = 94
+v[47] = 212
+v[48] = 427
+v[49] = 178
+
+Sorted Array:
+v[0] = 1016
+v[1] = 966
+v[2] = 951
+v[3] = 939
+v[4] = 927
+v[5] = 922
+v[6] = 909
+v[7] = 886
+v[8] = 870
+v[9] = 795
+v[10] = 791
+v[11] = 763
+v[12] = 745
+v[13] = 706
+v[14] = 611
+v[15] = 563
+v[16] = 561
+v[17] = 488
+v[18] = 487
+v[19] = 427
+v[20] = 349
+v[21] = 346
+v[22] = 346
+v[23] = 306
+v[24] = 302
+v[25] = 293
+v[26] = 261
+v[27] = 212
+v[28] = 201
+v[29] = 178
+v[30] = 163
+v[31] = 94
+v[32] = 88
+v[33] = 88
+v[34] = 49
+v[35] = 49
+v[36] = 49
+v[37] = 49
+v[38] = 49
+v[39] = 49
+v[40] = 49
+v[41] = 49
+v[42] = 49
+v[43] = 49
+v[44] = 49
+v[45] = 49
+v[46] = 49
+v[47] = 49
+v[48] = 49
+v[49] = 49
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ gdb assig3n[K[Kn3
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3...(no debugging symbols found)...done.
+(gdb) id[K[Kdisplay/d $2[Kw20
+1: /d $w20 = <error: No registers.>
+(gdb) display/d $w2[K19
+2: /d $w19 = <error: No registers.>
+(gdb) display/d $w18
+3: /d $w18 = <error: No registers.>
+(gdb) b unsortedLoo
+Function "unsortedLoo" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) b[Ky
+Breakpoint 1 (unsortedLoo) pending.
+(gdb) b unsortedLoop
+Breakpoint 2 at 0x400654
+(gdb) b innerLoop
+Breakpoint 3 at 0x4006c4
+(gdb) r
+Starting program: /home/ugc/soquresh/Documents/cpsc355/as3/assign3 
+
+Unsorted Array:
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 0
+2: /d $w19 = 0
+3: /d $w18 = 264969
+(gdb) c
+Continuing.
+v[0] = 359
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 359
+2: /d $w19 = 1
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[1] = 966
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 966
+2: /d $w19 = 2
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[2] = 105
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 105
+2: /d $w19 = 3
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[3] = 115
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 115
+2: /d $w19 = 4
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[4] = 81
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 81
+2: /d $w19 = 5
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[5] = 255
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 255
+2: /d $w19 = 6
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[6] = 74
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 74
+2: /d $w19 = 7
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[7] = 236
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 236
+2: /d $w19 = 8
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[8] = 809
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 809
+2: /d $w19 = 9
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[9] = 205
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 205
+2: /d $w19 = 10
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[10] = 186
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 186
+2: /d $w19 = 11
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[11] = 939
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 939
+2: /d $w19 = 12
+3: /d $w18 = 32
+(gdb) c
+Continuing.
+v[12] = 498
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 498
+2: /d $w19 = 13
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[13] = 763
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 763
+2: /d $w19 = 14
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[14] = 483
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 483
+2: /d $w19 = 15
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[15] = 326
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 326
+2: /d $w19 = 16
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[16] = 124
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 124
+2: /d $w19 = 17
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[17] = 706
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 706
+2: /d $w19 = 18
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[18] = 84
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 84
+2: /d $w19 = 19
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[19] = 1016
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 1016
+2: /d $w19 = 20
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[20] = 795
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 795
+2: /d $w19 = 21
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[21] = 488
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 488
+2: /d $w19 = 22
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[22] = 487
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 487
+2: /d $w19 = 23
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[23] = 909
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 909
+2: /d $w19 = 24
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[24] = 886
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 886
+2: /d $w19 = 25
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[25] = 346
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 346
+2: /d $w19 = 26
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[26] = 302
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 302
+2: /d $w19 = 27
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[27] = 611
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 611
+2: /d $w19 = 28
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[28] = 563
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 563
+2: /d $w19 = 29
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[29] = 927
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 927
+2: /d $w19 = 30
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[30] = 201
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 201
+2: /d $w19 = 31
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[31] = 922
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 922
+2: /d $w19 = 32
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[32] = 870
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 870
+2: /d $w19 = 33
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[33] = 306
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 306
+2: /d $w19 = 34
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[34] = 13
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 35
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[35] = 951
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 951
+2: /d $w19 = 36
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[36] = 561
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 561
+2: /d $w19 = 37
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[37] = 88
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 88
+2: /d $w19 = 38
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[38] = 163
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 163
+2: /d $w19 = 39
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[39] = 346
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 346
+2: /d $w19 = 40
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[40] = 293
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 293
+2: /d $w19 = 41
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[41] = 349
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 349
+2: /d $w19 = 42
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[42] = 261
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 261
+2: /d $w19 = 43
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[43] = 791
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 791
+2: /d $w19 = 44
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[44] = 88
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 88
+2: /d $w19 = 45
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[45] = 745
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 745
+2: /d $w19 = 46
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[46] = 94
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 94
+2: /d $w19 = 47
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[47] = 212
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 212
+2: /d $w19 = 48
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[48] = 427
+
+Breakpoint 2, 0x0000000000400654 in unsortedLoop ()
+1: /d $w20 = 427
+2: /d $w19 = 49
+3: /d $w18 = 32
+(gdb) 
+Continuing.
+v[49] = 178
+
+Sorted Array:
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 1
+2: /d $w19 = 0
+3: /d $w18 = 0
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 2
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 3
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 4
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 5
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 11
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 12
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 14
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 15
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 16
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 17
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 18
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 19
+2: /d $w19 = 0
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 20
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 21
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 22
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 23
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 24
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 25
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 26
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 27
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 28
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 29
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 30
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 31
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 32
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 33
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 34
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 35
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 36
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 37
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 38
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 39
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 40
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 41
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 42
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 43
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 44
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 45
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 46
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 47
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 48
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 49
+2: /d $w19 = 0
+3: /d $w18 = 19
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 2
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 3
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 4
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 5
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 11
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 12
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 14
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 15
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 16
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 17
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 18
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 19
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 20
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 21
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 22
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 23
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 24
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 25
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 26
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 27
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 28
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 29
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 30
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 31
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 32
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 33
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 34
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 35
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 36
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 37
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 38
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 39
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 40
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 41
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 42
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 43
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 44
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 45
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 46
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 47
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 48
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 49
+2: /d $w19 = 1
+3: /d $w18 = 1
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 3
+2: /d $w19 = 2
+3: /d $w18 = 2
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 4
+2: /d $w19 = 2
+3: /d $w18 = 3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 5
+2: /d $w19 = 2
+3: /d $w18 = 3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 2
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 2
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 2
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 2
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 2
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 11
+2: /d $w19 = 2
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 12
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 14
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 15
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 16
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 17
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 18
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 19
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 20
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 21
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 22
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 23
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 24
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 25
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 26
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 27
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 28
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 29
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 30
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 31
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 32
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 33
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 34
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 35
+2: /d $w19 = 2
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 36
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 37
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 38
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 39
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 40
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 41
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 42
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 43
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 44
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 45
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 46
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 47
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 48
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 49
+2: /d $w19 = 2
+3: /d $w18 = 35
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 4
+2: /d $w19 = 3
+3: /d $w18 = 3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 5
+2: /d $w19 = 3
+3: /d $w18 = 3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 3
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 3
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 3
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 3
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 3
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 11
+2: /d $w19 = 3
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 12
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 14
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 15
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 16
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 17
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 18
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 19
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 20
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 21
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 22
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 23
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 24
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 25
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 26
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 27
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 28
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 29
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 30
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 31
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 32
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 33
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 34
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 35
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 36
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 37
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 38
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 39
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 40
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 41
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 42
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 43
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 44
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 45
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 46
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 47
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 48
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 49
+2: /d $w19 = 3
+3: /d $w18 = 11
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 5
+2: /d $w19 = 4
+3: /d $w18 = 4
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 4
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 4
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 4
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 11
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 12
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 13
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 14
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 15
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 16
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 17
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 18
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 19
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 20
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 21
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 22
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 23
+2: /d $w19 = 4
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 24
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 25
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 26
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 27
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 28
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 29
+2: /d $w19 = 4
+3: /d $w18 = 23
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 30
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 31
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 32
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 33
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 34
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 35
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 36
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 37
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 38
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 39
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 40
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 41
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 42
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 43
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 44
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 45
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 46
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 47
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 48
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 49
+2: /d $w19 = 4
+3: /d $w18 = 29
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 6
+2: /d $w19 = 5
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 7
+2: /d $w19 = 5
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 8
+2: /d $w19 = 5
+3: /d $w18 = 5
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 9
+2: /d $w19 = 5
+3: /d $w18 = 8
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x00000000004006c4 in innerLoop ()
+1: /d $w20 = 10
+2: /d $w19 = 5
+3: /d $w18 = 8
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 5711] will be killed.
+
+Quit anyway? (y or n) y
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ du[Kis[K[K[Kgdb assign3
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3...(no debugging symbols found)...done.
+(gdb) display/d $w17
+1: /d $w17 = <error: No registers.>
+(gdb) display/d $w18
+2: /d $w18 = <error: No registers.>
+(gdb) display/d w[K$w19
+3: /d $w19 = <error: No registers.>
+(gdb) b outerSwapping
+Breakpoint 1 at 0x4006fc
+(gdb) b inn[K[K[KouterLoop
+Breakpoint 2 at 0x4006ac
+(gdb) c=r[K[K[Kr
+Starting program: /home/ugc/soquresh/Documents/cpsc355/as3/assign3 
+
+Unsorted Array:
+v[0] = 359
+v[1] = 966
+v[2] = 105
+v[3] = 115
+v[4] = 81
+v[5] = 255
+v[6] = 74
+v[7] = 236
+v[8] = 809
+v[9] = 205
+v[10] = 186
+v[11] = 939
+v[12] = 498
+v[13] = 763
+v[14] = 483
+v[15] = 326
+v[16] = 124
+v[17] = 706
+v[18] = 84
+v[19] = 1016
+v[20] = 795
+v[21] = 488
+v[22] = 487
+v[23] = 909
+v[24] = 886
+v[25] = 346
+v[26] = 302
+v[27] = 611
+v[28] = 563
+v[29] = 927
+v[30] = 201
+v[31] = 922
+v[32] = 870
+v[33] = 306
+v[34] = 13
+v[35] = 951
+v[36] = 561
+v[37] = 88
+v[38] = 163
+v[39] = 346
+v[40] = 293
+v[41] = 349
+v[42] = 261
+v[43] = 791
+v[44] = 88
+v[45] = 745
+v[46] = 94
+v[47] = 212
+v[48] = 427
+v[49] = 178
+
+Sorted Array:
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 281473766993576
+2: /d $w18 = 32
+3: /d $w19 = 0
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 281473766993576
+2: /d $w18 = 19
+3: /d $w19 = 0
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 1016
+2: /d $w18 = 19
+3: /d $w19 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 1016
+2: /d $w18 = 1
+3: /d $w19 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 966
+2: /d $w18 = 1
+3: /d $w19 = 2
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 966
+2: /d $w18 = 35
+3: /d $w19 = 2
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 951
+2: /d $w18 = 35
+3: /d $w19 = 3
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 951
+2: /d $w18 = 11
+3: /d $w19 = 3
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 939
+2: /d $w18 = 11
+3: /d $w19 = 4
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 939
+2: /d $w18 = 29
+3: /d $w19 = 4
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 927
+2: /d $w18 = 29
+3: /d $w19 = 5
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 927
+2: /d $w18 = 31
+3: /d $w19 = 5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 922
+2: /d $w18 = 31
+3: /d $w19 = 6
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 922
+2: /d $w18 = 23
+3: /d $w19 = 6
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 909
+2: /d $w18 = 23
+3: /d $w19 = 7
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 909
+2: /d $w18 = 24
+3: /d $w19 = 7
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 886
+2: /d $w18 = 24
+3: /d $w19 = 8
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 886
+2: /d $w18 = 32
+3: /d $w19 = 8
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 870
+2: /d $w18 = 32
+3: /d $w19 = 9
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 870
+2: /d $w18 = 20
+3: /d $w19 = 9
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 795
+2: /d $w18 = 20
+3: /d $w19 = 10
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 795
+2: /d $w18 = 43
+3: /d $w19 = 10
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 791
+2: /d $w18 = 43
+3: /d $w19 = 11
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 791
+2: /d $w18 = 13
+3: /d $w19 = 11
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 763
+2: /d $w18 = 13
+3: /d $w19 = 12
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 763
+2: /d $w18 = 45
+3: /d $w19 = 12
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 745
+2: /d $w18 = 45
+3: /d $w19 = 13
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 745
+2: /d $w18 = 17
+3: /d $w19 = 13
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 706
+2: /d $w18 = 17
+3: /d $w19 = 14
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 706
+2: /d $w18 = 27
+3: /d $w19 = 14
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 611
+2: /d $w18 = 27
+3: /d $w19 = 15
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 611
+2: /d $w18 = 28
+3: /d $w19 = 15
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 563
+2: /d $w18 = 28
+3: /d $w19 = 16
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 563
+2: /d $w18 = 36
+3: /d $w19 = 16
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 561
+2: /d $w18 = 36
+3: /d $w19 = 17
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 561
+2: /d $w18 = 21
+3: /d $w19 = 17
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 488
+2: /d $w18 = 21
+3: /d $w19 = 18
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 488
+2: /d $w18 = 22
+3: /d $w19 = 18
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 487
+2: /d $w18 = 22
+3: /d $w19 = 19
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 487
+2: /d $w18 = 48
+3: /d $w19 = 19
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 427
+2: /d $w18 = 48
+3: /d $w19 = 20
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 427
+2: /d $w18 = 41
+3: /d $w19 = 20
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 349
+2: /d $w18 = 41
+3: /d $w19 = 21
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 349
+2: /d $w18 = 39
+3: /d $w19 = 21
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 346
+2: /d $w18 = 39
+3: /d $w19 = 22
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 346
+2: /d $w18 = 25
+3: /d $w19 = 22
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 346
+2: /d $w18 = 25
+3: /d $w19 = 23
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 346
+2: /d $w18 = 33
+3: /d $w19 = 23
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 306
+2: /d $w18 = 33
+3: /d $w19 = 24
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 306
+2: /d $w18 = 26
+3: /d $w19 = 24
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 302
+2: /d $w18 = 26
+3: /d $w19 = 25
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 302
+2: /d $w18 = 40
+3: /d $w19 = 25
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 293
+2: /d $w18 = 40
+3: /d $w19 = 26
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x00000000004006fc in outerSwapping ()
+1: /d $w17 = 293
+2: /d $w18 = 42
+3: /d $w19 = 26
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006ac in outerLoop ()
+1: /d $w17 = 261
+2: /d $w18 = 42
+3: /d $w19 = 27
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 5724] will be killed.
+
+Quit anyway? (y or n) y
+]0;soquresh@csa3:~/Documents/cpsc355/as3soquresh@csa3:~/Documents/cpsc355/as3$ exit
+exit
+
+Script done on 2018-02-26 12:05:03-0700
