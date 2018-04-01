@@ -1,0 +1,1028 @@
+Script started on 2018-01-31 00:05:22-0700
+]0;soquresh@csa3:~/Documents/cpsc355/tuts/as1soquresh@csa3:~/Documents/cpsc355/tuts/as1$ gdb omar
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from omar...(no debugging symbols found)...done.
+(gdb) layout reg
+[?1049h[1;75r(B[m[4l[?7h[?1h=[H[2J[50d(B[0;7mexec No process In:                                                                                                            L??   PC: ?? [51;1H(B[m[H   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;4H(0[0mx(B[140G(0[0mx(B[3;4H(0[0mx(B[140G(0[0mx(B[4;4H(0[0mx(B[140G(0[0mx(B[5;4H(0[0mx(B[140G(0[0mx(B[6;4H(0[0mx(B[140G(0[0mx(B[7;4H(0[0mx(B[140G(0[0mx(B[8;4H(0[0mx(B[140G(0[0mx(B[9;4H(0[0mx(B[140G(0[0mx(B[10;4H(0[0mx(B[140G(0[0mx(B[11;4H(0[0mx(B[140G(0[0mx(B[12;4H(0[0mx(B[140G(0[0mx(B[13;4H(0[0mx(B[140G(0[0mx(B[14;4H(0[0mx(B[140G(0[0mx(B[15;4H(0[0mx(B[140G(0[0mx(B[16;4H(0[0mx(B[140G(0[0mx(B[17;4H(0[0mx(B[140G(0[0mx(B[18;4H(0[0mx(B[140G(0[0mx(B[19;4H(0[0mx(B[140G(0[0mx(B[20;4H(0[0mx(B[140G(0[0mx(B[21;4H(0[0mx(B[140G(0[0mx(B[22;4H(0[0mx(B[140G(0[0mx(B[23;4H(0[0mx(B[140G(0[0mx(B[24;4H(0[0mx(B[140G(0[0mx(B[25;4H(0[0mx(B[140G(0[0mx(B[26;4H(0[0mx(B[140G(0[0mx(B[27;4H(0[0mx(B[140G(0[0mx(B[28;4H(0[0mx(B[140G(0[0mx(B[29;4H(0[0mx(B[140G(0[0mx(B[30;4H(0[0mx(B[140G(0[0mx(B[31;4H(0[0mx(B[140G(0[0mx(B[32;4H(0[0mx(B[140G(0[0mx(B[33;4H(0[0mx(B[140G(0[0mx(B[34;4H(0[0mx(B[140G(0[0mx(B[35;4H(0[0mx(B[140G(0[0mx(B[36;4H(0[0mx(B[140G(0[0mx(B[37;4H(0[0mx(B[140G(0[0mx(B[38;4H(0[0mx(B[140G(0[0mx(B[39;4H(0[0mx(B[140G(0[0mx(B[40;4H(0[0mx(B[140G(0[0mx(B[41;4H(0[0mx(B[140G(0[0mx(B[42;4H(0[0mx(B[140G(0[0mx(B[43;4H(0[0mx(B[140G(0[0mx(B[44;4H(0[0mx(B[140G(0[0mx(B[45;4H(0[0mx(B[140G(0[0mx(B[46;4H(0[0mx(B[140G(0[0mx(B[47;4H(0[0mx(B[140G(0[0mx(B[48;4H(0[0mx(B[140G(0[0mx(B[49;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;4H(0[0m(B[25;48H[ No Source Available ][25;48H[23X[H   [25;48H[ No Source Available ][H[25;71H[?1h=[51d[H[2J   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;4H(0[0mx(B[140G(0[0mx(B[3;4H(0[0mx(B[140G(0[0mx(B[4;4H(0[0mx(B[140G(0[0mx(B[5;4H(0[0mx(B[140G(0[0mx(B[6;4H(0[0mx(B[140G(0[0mx(B[7;4H(0[0mx(B[140G(0[0mx(B[8;4H(0[0mx(B[140G(0[0mx(B[9;4H(0[0mx(B[140G(0[0mx(B[10;4H(0[0mx(B[140G(0[0mx(B[11;4H(0[0mx(B[140G(0[0mx(B[12;4H(0[0mx(B[140G(0[0mx(B[13;4H(0[0mx(B[140G(0[0mx(B[14;4H(0[0mx(B[140G(0[0mx(B[15;4H(0[0mx(B[140G(0[0mx(B[16;4H(0[0mx(B[140G(0[0mx(B[17;4H(0[0mx(B[140G(0[0mx(B[18;4H(0[0mx(B[140G(0[0mx(B[19;4H(0[0mx(B[140G(0[0mx(B[20;4H(0[0mx(B[140G(0[0mx(B[21;4H(0[0mx(B[140G(0[0mx(B[22;4H(0[0mx(B[140G(0[0mx(B[23;4H(0[0mx(B[140G(0[0mx(B[24;4H(0[0mx(B[140G(0[0mx(B[25;4H(0[0mx(B[25;48H(0[0m(B[ No Source Available ][140G(0[0mx(B[26;4H(0[0mx(B[140G(0[0mx(B[27;4H(0[0mx(B[140G(0[0mx(B[28;4H(0[0mx(B[140G(0[0mx(B[29;4H(0[0mx(B[140G(0[0mx(B[30;4H(0[0mx(B[140G(0[0mx(B[31;4H(0[0mx(B[140G(0[0mx(B[32;4H(0[0mx(B[140G(0[0mx(B[33;4H(0[0mx(B[140G(0[0mx(B[34;4H(0[0mx(B[140G(0[0mx(B[35;4H(0[0mx(B[140G(0[0mx(B[36;4H(0[0mx(B[140G(0[0mx(B[37;4H(0[0mx(B[140G(0[0mx(B[38;4H(0[0mx(B[140G(0[0mx(B[39;4H(0[0mx(B[140G(0[0mx(B[40;4H(0[0mx(B[140G(0[0mx(B[41;4H(0[0mx(B[140G(0[0mx(B[42;4H(0[0mx(B[140G(0[0mx(B[43;4H(0[0mx(B[140G(0[0mx(B[44;4H(0[0mx(B[140G(0[0mx(B[45;4H(0[0mx(B[140G(0[0mx(B[46;4H(0[0mx(B[140G(0[0mx(B[47;4H(0[0mx(B[140G(0[0mx(B[48;4H(0[0mx(B[140G(0[0mx(B[49;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[50;1H(0[0m(B[0;7mexec No process In:                                                                                                            L??   PC: ?? [1;1H(B[m[25;71H[50d[H   (0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[2;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[3;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[4;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[5;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[6;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[7;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[8;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[9;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[10;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[11;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[12;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[13;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[14;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[15;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[16;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[17;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[18;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[19;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[20;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[21;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[22;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[23;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[24;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[25;4H(0[0;1;7mx(B(B[m[25;48H(0[0;1;7m(B(B[m[23X[140G(0[0;1;7mx(B(B[m[26;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[27;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[28;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[29;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[30;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[31;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[32;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[33;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[34;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[35;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[36;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[37;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[38;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[39;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[40;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[41;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[42;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[43;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[44;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[45;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[46;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[47;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[48;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[49;4H(0[0;1;7mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B(B[m[1;4H(0[0;1;7m(B(B[m[25;48H[ No Source Available ][H[51d[25d   (0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[26;4H(0[0mx(B[140G(0[0mx(B[27;4H(0[0mx(B[140G(0[0mx(B[28;4H(0[0mx(B[140G(0[0mx(B[29;4H(0[0mx(B[140G(0[0mx(B[30;4H(0[0mx(B[140G(0[0mx(B[31;4H(0[0mx(B[140G(0[0mx(B[32;4H(0[0mx(B[140G(0[0mx(B[33;4H(0[0mx(B[140G(0[0mx(B[34;4H(0[0mx(B[140G(0[0mx(B[35;4H(0[0mx(B[140G(0[0mx(B[36;4H(0[0mx(B[140G(0[0mx(B[37;4H(0[0mx(B[140G(0[0mx(B[38;4H(0[0mx(B[140G(0[0mx(B[39;4H(0[0mx(B[140G(0[0mx(B[40;4H(0[0mx(B[140G(0[0mx(B[41;4H(0[0mx(B[140G(0[0mx(B[42;4H(0[0mx(B[140G(0[0mx(B[43;4H(0[0mx(B[140G(0[0mx(B[44;4H(0[0mx(B[140G(0[0mx(B[45;4H(0[0mx(B[140G(0[0mx(B[46;4H(0[0mx(B[140G(0[0mx(B[47;4H(0[0mx(B[140G(0[0mx(B[48;4H(0[0mx(B[140G(0[0mx(B[49;4H(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[25;4H(0[0m(B[H(0[0mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B[2;1H(0[0mx(B   [140G(0[0mx(B[3;1H(0[0mx(B   [140G(0[0mx(B[4;1H(0[0mx(B   [140G(0[0mx(B[5;1H(0[0mx(B   [140G(0[0mx(B[6;1H(0[0mx(B   [140G(0[0mx(B[7;1H(0[0mx(B   [140G(0[0mx(B[8;1H(0[0mx(B   [140G(0[0mx(B[9;1H(0[0mx(B   [140G(0[0mx(B[10;1H(0[0mx(B   [140G(0[0mx(B[11;1H(0[0mx(B   [140G(0[0mx(B[12;1H(0[0mx(B   [140G(0[0mx(B[13;1H(0[0mx(B   [140G(0[0mx(B[14;1H(0[0mx(B   [140G(0[0mx(B[15;1H(0[0mx(B   [140G(0[0mx(B[16;1H(0[0mx(B   [140G(0[0mx(B[17;1H(0[0mx(B   [140G(0[0mx(B[18;1H(0[0mx(B   [140G(0[0mx(B[19;1H(0[0mx(B   [140G(0[0mx(B[20;1H(0[0mx(B   [140G(0[0mx(B[21;1H(0[0mx(B   [140G(0[0mx(B[22;1H(0[0mx(B   [140G(0[0mx(B[23;1H(0[0mx(B   [140G(0[0mx(B[24;1H(0[0mx(B   [140G(0[0mx(B[25;1H(0[0mmqqq(B[140G(0[0mj(B[1;1H(0[0m(B[50d[25;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[26;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[27;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[28;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[29;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[30;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[31;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[32;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[33;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[34;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[35;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[36;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[37;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[38;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[39;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[40;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[41;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[42;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[43;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[44;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[45;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[46;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[47;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[48;4H(0[0;1;7mx(B(B[m[140G(0[0;1;7mx(B(B[m[49;4H(0[0;1;7mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B(B[m[25;4H(0[0;1;7m(B(B[m
+[C0x4005c8 <main>[26;29Hstp    x29, x30, [sp, #-16]!
+[5G0x4005cc <main+4>[29Gmov    x29, x30
+[5G0x4005d0 <main+8>[29Gmov    x19, #0xfffffffffffffff9[28;68H// #-7
+[5G0x4005d4 <test>[29;29Hcmp    x19, #0x5
+[5G0x4005d8 <test+4>[29Gb.gt   0x400648 <exit>
+[5G0x4005dc <loop>[31;29Hmov    x20, #0xfffffffffffffff7[31;68H// #-9
+[5G0x4005e0 <loop+4>[29Gmov    x21, #0xfffffffffffffffd[32;68H// #-3
+[5G0x4005e4 <loop+8>[29Gmul    x21, x21, x19
+[5G0x4005e8 <loop+12>[29Gmov    x23, #0xe[34;68H// #14
+[5G0x4005ec <loop+16>[29Gmul    x24, x19, x19
+[5G0x4005f0 <loop+20>[29Gmul    x23, x23, x24
+[5G0x4005f4 <loop+24>[29Gmov    x25, #0x2[37;68H// #2
+[5G0x4005f8 <loop+28>[29Gmul    x26, x19, x19
+[5G0x4005fc <loop+32>[29Gmul    x26, x26, x19
+[5G0x400600 <loop+36>[29Gmul    x26, x26, x25
+[5G0x400604 <loop+40>[29Gadd    x26, x26, x23
+[5G0x400608 <loop+44>[29Gadd    x26, x26, x21
+[5G0x40060c <loop+48>[29Gadd    x26, x26, x20
+[5G0x400610 <loop+52>[29Gcmn    x19, #0x7
+[5G0x400614 <loop+56>[29Gb.ne   0x400620 <mincheck>  // b.any
+[5G0x400618 <loop+60>[29Gmov    x27, x26
+[5G0x40061c <loop+64>[29Gb	   0x40062c <print>
+[5G0x400620 <mincheck>     cmp    x26, x27[140G[25d   [49d[25d(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;1H(0[0m(B[13;39H[ Register Values Unavailable ][51d(gdb) b	main[25d   
+
+
+b+[49d
+
+
+Breakpoint 1 at 0x4005d0
+(gdb) b	print
+Breakpoint 2 at 0x40062c
+(gdb) b	mincheck[28d  [25d
+
+
+b+[48db+
+[56dBreakpoint 3 at 0x400620
+(gdb) r
+Starting program: /home/ugc/soquresh/Documents/cpsc355/tuts/as1/omar
+[25;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[48;140H(0[0;1;7m(B(B[m[28d  [48d  [25d
+
+
+b+[48db+
+
+(B[0;7mnative process 20896 In:
+(B[m[59d[48;140H[28d  [48d  [25d
+
+
+b+[48db+
+
+
+[59d[48;140H[28d  [48d  [25d
+
+
+b+[48db+
+
+
+[59d[48;140H[28d  [48d  [25d
+
+
+b+[48db+
+
+
+[59d[48;140H[28d  [48d  [25d
+
+
+b+[48db+
+
+
+[59d[28d  [48d  [25d
+
+
+B+[48db+
+[50;26H(B[0;7mmain[50;122HL??   PC: 0x4005d0
+(B[m[28;5H(B[0;7m0x4005d0 <main+8>       mov    x19, #0xfffffffffffffff9        // #-7[140G(B[m  [48d  [25d
+
+
+B+>[48db+
+[1;4HRegister group: general[13;39H[31X[25d(0[0mmqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[1;27H(0[0m(B
+[Cx0[2;17H0x1	 1[2;71Hx1[2;86H0xfffffffff278   281474976707192
+[Cx2[3;17H0xfffffffff288   281474976707208[3;71Hx3[3;86H0x4005c8 4195784
+[Cx4[4;17H0xfffffffff190   281474976706960[4;71Hx5[4;86H0xffffb7ffb2b0   281473768731312
+[Cx6[5;17H0xfffffffff270   281474976707184[5;71Hx7[5;86H0x101    257
+[Cx8[6;17H0xffffffffffffffff	 -1[6;71Hx9[6;86H0xfffff  1048575
+[Cx10[7;17H0xffffb7e01cc8   281473766661320[7;71Hx11[7;86H0xffffb7e0eb20   281473766714144
+[Cx12[8;17H0xffffb7e01ad0   281473766660816[8;71Hx13[8;86H0xffffb7ffefb0   281473768746928
+[Cx14[9;17H0x0	 0[9;71Hx15[9;86H0xffffb7dffa60   281473766652512
+[Cx16[10;17H0xffffb7e1d580   281473766774144[10;71Hx17[10;86H0x420000 4325376
+[Cx18[11;17H0x40b09  264969[11;71Hx19[11;86H0x400660 4195936
+[Cx20[12;17H0x0	 0[12;71Hx21[12;86H0x4004a0 4195488
+[Cx22[13;17H0x0	 0[13;71Hx23[13;86H0x0[95G0
+[Cx24[14;17H0x0	 0[14;71Hx25[14;86H0x0[95G0
+[Cx26[15;17H0x0	 0[15;71Hx27[15;86H0x0[95G0
+[Cx28[16;17H0x0	 0[16;71Hx29[16;86H0xffffb7e1d66c   281473766774380
+[Cx30[17;17H0xffffb7e1d66c   281473766774380[17;71Hsp[17;86H0xfffffffff130   0xfffffffff130
+[Cpc[18;17H0x4005d0 0x4005d0 <main+8>[18;71Hcpsr[18;86H0x60000000[103G[ EL=0 C Z ]
+[Cfpsr[19;17H0x0	 0[19;71Hfpcr[19;86H0x0[95G0[60dBreakpoint 1, 0x00000000004005d0 in main ()
+(gdb) display/d	$x26
+1: /d $x26 = 0
+(gdb) display/d	$x27
+2: /d $x27 = 0
+(gdb) display/d	$x2 19
+3: /d $x19 = 4195936
+(gdb) i ni
+[50;26H(B[0;7mtest[139G4
+(B[m[28;5H0x4005d0 <main+8>       mov    x19, #0xfffffffffffffff9        // #-7
+[5G(B[0;7m0x4005d4 <test>         cmp    x19, #0x5[140G(B[m[25d   
+
+
+   [48d  [25d
+
+
+B+
+>[48db+
+[11;71H(B[0;7mx19            0xfffffffffffffff9       -7                          [11;113H(B[m[18;2H(B[0;7mpc             0x4005d4 0x4005d4 <test>                             [18;41H(B[m[18;71H(B[0;7mcpsr           0x60200000       [ EL=0 SS C Z ]                     [18;118H(B[m[68d0x00000000004005d4 in test ()
+1: /d $x26 = 0
+2: /d $x27 = 0
+3: /d $x19 = -7
+(gdb) ni
+[50;139H(B[0;7m8
+(B[m[29;5H0x4005d4 <test>         cmp    x19, #0x5
+[5G(B[0;7m0x4005d8 <test+4>       b.gt   0x400648 <exit>[140G(B[m[28d  
+ [48d  [25d
+
+
+B+
+
+>[48db+
+[11;71Hx19            0xfffffffffffffff9       -7[26X[18;24H(B[0;7m8[18;33H8[40G+4>(B[m[18;88H(B[0;7ma[18;115HN ](B[m[73d0x00000000004005d8 in test ()
+1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;26H(B[0;7mloop[139Gc
+(B[m[30;5H0x4005d8 <test+4>       b.gt   0x400648 <exit>
+[5G(B[0;7m0x4005dc <loop>         mov    x20, #0xfffffffffffffff7        // #-9[140G(B[m[28d  
+
+ [48d  [25d
+
+
+B+
+
+
+>[48db+
+[18;24H(B[0;7mc[18;33Hc <loop>  [Z(B[m[18;71Hcpsr           0xa0200000       [ EL=0 SS C N ][21X[51d[M[74d0x00000000004005dc in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) nin	 	[51d[M[75d[50;138H(B[0;7me0
+(B[m[31;5H0x4005dc <loop>         mov    x20, #0xfffffffffffffff7        // #-9
+[5G(B[0;7m0x4005e0 <loop+4>       mov    x21, #0xfffffffffffffffd        // #-3[140G(B[m[28d  
+
+
+ [48d  [25d
+
+
+B+
+
+
+
+>[48db+
+[12;2H(B[0;7mx20            0xfffffffffffffff7       -9                          [12;44H(B[m[18;23H(B[0;7me0[32Ge0[40G+4>(B[m[51d[M[74d0x00000000004005e0 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[32;5H0x4005e0 <loop+4>       mov    x21, #0xfffffffffffffffd        // #-3
+[5G(B[0;7m0x4005e4 <loop+8>       mul    x21, x21, x19[140G(B[m[28d  
+
+
+
+ [48d  [25d
+
+
+B+[33d>[48db+
+[12;2Hx20            0xfffffffffffffff7       -9[26X[12;71H(B[0;7mx21            0xfffffffffffffffd       -3                          [12;113H(B[m[18;24H(B[0;7m4[18;33H4	8>(B[m[51d[M[74d0x00000000004005e4 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m8
+(B[m[33;5H0x4005e4 <loop+8>       mul    x21, x21, x19
+[5G(B[0;7m0x4005e8 <loop+12>      mov    x23, #0xe                       // #14[140G(B[m[28d  [33d [48d  [25d
+
+
+B+[34d>[48db+
+[12;88H(B[0;7m15     21       [111G  [12;97H(B[m[18;24H(B[0;7m8[18;33H8	12>(B[m[51d[M[74d0x00000000004005e8 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7mc
+(B[m[34;5H0x4005e8 <loop+12>      mov    x23, #0xe[23X[34;68H// #14
+[5G(B[0;7m0x4005ec <loop+16>      mul    x24, x19, x19[140G(B[m[28d  [34d [48d  [25d
+
+
+B+[35d>[48db+
+[12;71Hx21            0x15     21[42X[13;71H(B[0;7mx23            0xe      14                                          [13;97H(B[m[18;24H(B[0;7mc[18;33Hc[18;42H6>(B[m[51d[M[74d0x00000000004005ec in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;138H(B[0;7mf0
+(B[m[35;5H0x4005ec <loop+16>      mul    x24, x19, x19
+[5G(B[0;7m0x4005f0 <loop+20>      mul    x23, x23, x24[140G(B[m[28d  [35d [48d  [25d
+
+
+B+[36d>[48db+
+[13;71Hx23            0xe      14[42X
+[C(B[0;7mx24            0x31     49                                          [14;28H(B[m[18;23H(B[0;7mf0[32Gf0	20>(B[m[51d[M[74d0x00000000004005f0 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[36;5H0x4005f0 <loop+20>      mul    x23, x23, x24
+[5G(B[0;7m0x4005f4 <loop+24>      mov    x25, #0x2                       // #2[140G(B[m[28d  [36d [48d  [25d
+
+
+B+[37d>[48db+
+[13;71H(B[0;7mx23            0x2ae    686                                         [13;98H(B[m
+[Cx24            0x31     49[42X[18;24H(B[0;7m4[18;33H4[18;42H4>(B[m[51d[M[74d0x00000000004005f4 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m8
+(B[m[37;5H0x4005f4 <loop+24>      mov    x25, #0x2[23X[37;68H// #2
+[5G(B[0;7m0x4005f8 <loop+28>      mul    x26, x19, x19[140G(B[m[28d  [37d [48d  [25d
+
+
+B+[38d>[48db+
+[13;71Hx23            0x2ae    686[41X[14;71H(B[0;7mx25            0x2      2                                           [14;96H(B[m[18;24H(B[0;7m8[18;33H8[18;42H8>(B[m[51d[M[74d0x00000000004005f8 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7mc
+(B[m[38;5H0x4005f8 <loop+28>      mul    x26, x19, x19
+[5G(B[0;7m0x4005fc <loop+32>      mul    x26, x26, x19[140G(B[m[28d  [38d [48d  [25d
+
+
+B+[39d>[48db+
+[14;71Hx25            0x2      2[43X
+[C(B[0;7mx26            0x31     49                                          [15;28H(B[m
+
+
+[Z(B[0;7mc[18;33Hc	32>(B[m[51d[M[74d0x00000000004005fc in loop ()
+[51d[M[74d1: /d $x26 = 49
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;137H(B[0;7m600
+(B[m[39;5H0x4005fc <loop+32>      mul    x26, x26, x19
+[5G(B[0;7m0x400600 <loop+36>      mul    x26, x26, x25[140G(B[m[28d  [39d [48d  [25d
+
+
+B+[40d>[48db+
+[15;19H(B[0;7mfffffffffffffea9	 -343(B[m[18;22H(B[0;7m600[31G600[18;42H6>(B[m[51d[M[74d0x0000000000400600 in loop ()
+[51d[M[74d1: /d $x26 = -343
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[40;5H0x400600 <loop+36>      mul    x26, x26, x25
+[5G(B[0;7m0x400604 <loop+40>      add    x26, x26, x23[140G(B[m[28d  [40d [48d  [25d
+
+
+B+[41d>[48db+
+[15;32H(B[0;7md52[15;43H686(B[m[18;24H(B[0;7m4[18;33H4	40>(B[m[51d[M[74d0x0000000000400604 in loop ()
+[51d[M[74d1: /d $x26 = -686
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m8
+(B[m[41;5H0x400604 <loop+40>      add    x26, x26, x23
+[5G(B[0;7m0x400608 <loop+44>      add    x26, x26, x21[140G(B[m[28d  [41d [48d  [25d
+
+
+B+[42d>[48db+
+[15;19H(B[0;7m0      0        	     [15;27H(B[m
+
+
+[Z(B[0;7m8[18;33H8[18;42H4>(B[m[51d[M[74d0x0000000000400608 in loop ()
+[51d[M[74d1: /d $x26 = 0
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7mc
+(B[m[42;5H0x400608 <loop+44>      add    x26, x26, x21
+[5G(B[0;7m0x40060c <loop+48>      add    x26, x26, x20[140G(B[m[28d  [42d [48d  [25d
+
+
+B+[43d>[48db+
+[15;19H(B[0;7m15     21(B[m
+
+
+[Z(B[0;7mc[18;33Hc[18;42H8>(B[m[51d[M[74d0x000000000040060c in loop ()
+[51d[M[74d1: /d $x26 = 21
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;138H(B[0;7m10
+(B[m[43;5H0x40060c <loop+48>      add    x26, x26, x20
+[5G(B[0;7m0x400610 <loop+52>      cmn    x19, #0x7[140G(B[m[28d  [43d [48d  [25d
+
+
+B+[44d>
+
+
+
+b+
+[15;19H(B[0;7mc      12(B[m[18;23H(B[0;7m10[32G10	52>(B[m[51d[M[74d0x0000000000400610 in loop ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[44;5H0x400610 <loop+52>      cmn    x19, #0x7
+[5G(B[0;7m0x400614 <loop+56>      b.ne   0x400620 <mincheck>  // b.any[140G(B[m[28d  [44d 
+
+
+
+  [25d
+
+
+B+[45d>
+
+
+b+
+[15;2Hx26            0xc      12[42X
+
+
+[Z(B[0;7m4[18;33H4[18;42H6>(B[m[18;71H(B[0;7mcpsr           0x60200000       [ EL=0 SS C Z ]                     [18;118H(B[m[51d[M[74d0x0000000000400614 in loop ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m8
+(B[m[45;5H0x400614 <loop+56>      b.ne   0x400620 <mincheck>  // b.any
+[5G(B[0;7m0x400618 <loop+60>      mov    x27, x26[140G(B[m[28d  [45d 
+
+
+  [25d
+
+
+B+[46d>
+
+b+
+[18;24H(B[0;7m8[18;33H8	60>(B[m[18;71Hcpsr           0x60200000       [ EL=0 SS C Z ][21X[51d[M[74d0x0000000000400618 in loop ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 0
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7mc
+(B[m[25;4H(0[0;1;7mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk(B(B[m[26;11H(0[0;1;7m(B(B[mf8 <loop+28>[29Gmul[38G6, x19, x19        [27;11Hfc <loop+32>[30Gul[38G6, x26, x19[28;10H600 <loop+36>[30Gul    x26, x26, x25           [28;68H      [29;10H604 <loop+40>[29Gadd    x26, x26, x23[30;10H608 <loop+44>[29Gadd    x26, x26, x21  [31;10H60	op+48>[29Gadd[38G6, x26, x20           [31;68H      [32;10H61[32;20H52>[29Gcmn    x19, #0x7[15X[32;68H      [33;10H61[33;20H56>[29Gb.ne   0x400620 <mincheck>  // b.any[34;10H61[34;20H60[34;38H7, x26 [34;68H      
+[5G(B[0;7m0x40061c <loop+64>      b      0x40062c <print>[36;10H(B[m620 <mincheck>     cmp[38G6, x27     [37;10H624 <mincheck+4>   b.ge   0x40062c <print>  // b.tcont         [38;10H628 <mincheck+8>   mov[38G7, x26     [39;10H62c <print>  [29Gldr    x0, 0x400658 <exit+16>[40;11H30 <print+4[40;30Hov    x1, x19      [41;11H34 <print+8[29Gmov[38G, x26      [42;11H38 <print+12>     mov    x3, x27      [43;11H3c <print+16>     bl     0x400490 <printf@plt>[44;11H40 <print+20>     add[44;41Hx19, #0x1[45;11H44 <print+24>[30G   [45;41H5d4 <test>[14X
+[5G0x400648 <exit>         mov    w0, #0x0[46;68H// #0[47;11H4c <exit+4> [29Gldp    x29, x30, [sp], #16[48;11H50 <exit+8>       ret            [140G[28d  [46d 
+
+  [25d[35d  >
+b+
+
+
+b+[49d[35d   
+  
+
+
+  [25d[35d  >
+b+
+
+
+b+[49d[15;71H(B[0;7mx27            0xc      12                                          [15;97H(B[m[18;24H(B[0;7mc[18;33Hc[18;42H4>(B[m[51d[M[74d0x000000000040061c in loop ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[35d   
+  
+
+
+  [25d[35d  >
+b+
+
+
+B+[49d[50;26H(B[0;7mprint[138G2
+(B[m[35;5H0x40061c <loop+64>      b      0x40062c <print>[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[35;3H 
+  
+
+
+  [25d[36db+
+
+
+B+>[49d[15;71Hx27            0xc      12[42X[18;23H(B[0;7m2[18;32H2c <print>  (B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;138H(B[0;7m30
+(B[m[39;5H0x40062c <print>        ldr    x0, 0x400658 <exit+16>
+[5G(B[0;7m0x400630 <print+4>      mov    x1, x19[140G(B[m[36d  
+
+
+   [25d[36db+
+
+
+B+
+>[49d[H
+[C(B[0;7mx0             0x4005a8 4195752                                     [2;33H(B[m[18;23H(B[0;7m30[32G30	+4>(B[m[51d[M[74d0x0000000000400630 in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[40;5H0x400630 <print+4>      mov    x1, x19
+[5G(B[0;7m0x400634 <print+8>      mov    x2, x26[140G(B[m[36d  
+
+
+  
+ [25d[36db+
+
+
+B+
+
+>[49d[H
+[Cx0             0x4005a8 4195752[37X[2;71H(B[0;7mx1             0xfffffffffffffff9       -7                          [2;113H(B[m[18;24H(B[0;7m4[18;33H4[18;42H8>(B[m[51d[M[74d0x0000000000400634 in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m8
+(B[m[41;5H0x400634 <print+8>      mov    x2, x26
+[5G(B[0;7m0x400638 <print+12>     mov    x3, x27[140G(B[m[36d  
+
+
+  
+
+ [25d[36db+
+
+
+B+
+
+
+>[49d[2;71Hx1             0xfffffffffffffff9       -7[26X
+[C(B[0;7mx2             0xc      12                                          [3;28H(B[m[18;24H(B[0;7m8[18;33H8[18;42H12>(B[m[51d[M[74d0x0000000000400638 in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7mc
+(B[m[42;5H0x400638 <print+12>     mov    x3, x27
+[5G(B[0;7m0x40063c <print+16>     bl     0x400490 <printf@plt>[140G(B[m[36d  
+
+
+  
+
+
+ [25d[36db+
+
+
+B+
+
+
+
+>[49d[3;2Hx2             0xc      12[42X[3;71H(B[0;7mx3             0xc      12                                          [3;97H(B[m[18;24H(B[0;7mc[18;33Hc[18;43H6>(B[m[51d[M[74d0x000000000040063c in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75dx is -7, y is 12, min is 12
+[36d  
+
+
+  
+
+
+
+ [25d[36db+
+
+
+B+
+
+
+
+>
+B+[49d[36d  
+
+
+  
+
+
+
+ 
+  [25d[36db+
+
+
+B+
+
+
+
+>[49d
+[138G(B[0;7m40
+(B[m[43;5H0x40063c <print+16>     bl     0x400490 <printf@plt>
+[5G(B[0;7m0x400640 <print+20>     add    x19, x19, #0x1[140G(B[m[36d  
+
+
+  
+
+
+
+ [25d[36db+
+
+
+B+[44d>[49d[H
+[C(B[0;7mx0             0x1c     28                                          [2;28H(B[m[2;71H(B[0;7mx1             0x0      0                                           [2;96H(B[m
+[C(B[0;7mx2             0xc24a180e23e0dd00       -4446715233064395520        [3;62H(B[m[3;88H(B[0;7m0[95G0 (B[m
+[C(B[0;7mx4             0x0      0                                           [4;27H(B[m[4;71H(B[0;7mx5             0x42102c 4329516                                     [4;102H(B[m
+[C(B[0;7mx6             0xa      10                                          [5;28H(B[m[5;71H(B[0;7mx7             0xa      10                                          [5;97H(B[m
+[C(B[0;7mx8             0x40     64                                          [6;28H(B[m[6;71H(B[0;7mx9             0x0      0                                           [6;96H(B[m
+[C(B[0;7mx10            0x2      2                                           [7;27H(B[m[7;71H(B[0;7mx11            0xffffffffeff8   281474976706552                     [7;118H(B[m
+[C(B[0;7mx12            0x0      0                                           [8;27H(B[m[8;71H(B[0;7mx13            0xc      12                                          [8;97H(B[m[9;71H(B[0;7mx15            0xffffffffeff6   281474976706550                     [9;118H(B[m
+[C(B[0;7mx16            0x0      0                                           [10;27H(B[m[10;71H(B[0;7mx17            0xffffb7fd5570   281473768576368                     [10;118H(B[m
+[C(B[0;7mx18            0x20     32                                          [11;28H(B[m[17;2H(B[0;7mx30            0x400640 4195904                                     [17;33H(B[m[18;23H(B[0;7m40[32G40[18;42H20>(B[m[18;71H(B[0;7mcpsr           0x60000000       [ EL=0 C Z ]                        [18;115H(B[m[51d[M[74d0x0000000000400640 in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -7
+(gdb) ni[51d[M[75d[50;139H(B[0;7m4
+(B[m[44;5H0x400640 <print+20>     add    x19, x19, #0x1
+[5G(B[0;7m0x400644 <print+24>     b      0x4005d4 <test>[140G(B[m[36d  
+
+
+  [44d [25d[36db+
+
+
+B+[45d>
+
+
+
+[H
+[Cx0             0x1c     28[42X[2;71Hx1             0x0      0[43X
+[Cx2             0xc24a180e23e0dd00       -4446715233064395520        [3;62H[3;71Hx3             0x0      0[43X
+[Cx4             0x0      0[43X[4;71Hx5             0x42102c 4329516[37X
+[Cx6             0xa      10[42X[5;71Hx7             0xa      10[42X
+[Cx8             0x40     64[42X[6;71Hx9             0x0      0[43X
+[Cx10            0x2      2[43X[7;71Hx11            0xffffffffeff8   281474976706552[21X
+[Cx12            0x0      0[43X[8;71Hx13            0xc      12[42X[9;71Hx15            0xffffffffeff6   281474976706550[21X
+[Cx16            0x0      0[43X[10;71Hx17            0xffffb7fd5570   281473768576368[21X
+[Cx18            0x20     32[42X[11;71H(B[0;7mx19            0xfffffffffffffffa       -6                          [11;113H(B[m[17;2Hx30            0x400640 4195904[37X[18;24H(B[0;7m4[18;33H4[18;43H4>(B[m[18;90H(B[0;7m2[18;110HSS C Z ](B[m[51d[M[74d0x0000000000400644 in print ()
+[51d[M[74d1: /d $x26 = 12
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -6
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+[36d  
+
+
+  [45d [25d[36dB+
+
+
+B+[44db+
+>
+
+
+
+[36d  
+
+
+  [44d  
+ [25d[36dB+
+
+
+B+[45d>
+
+
+
+[50;26H(B[0;7mmincheck[138G20
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[45;5H(B[m0x400644 <print+24>     b      0x4005d4 <test>[140G[36d  
+
+
+  [45d [25d[36dB+>
+
+
+B+[49d[11;71Hx19            0xfffffffffffffffa       -6[26X[12;71H(B[0;7mx21            0x12     18                                          [12;97H(B[m[13;71H(B[0;7mx23            0x1f8    504                                         [13;98H(B[m
+[C(B[0;7mx24            0x24     36                                          [14;28H(B[m
+[C(B[0;7mx26            0x51     81                                          [15;28H(B[m[18;23H(B[0;7m20[32G20 <mincheck>(B[m[18;88H(B[0;7m200[18;110HC ]     [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 81
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -6
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[12;71Hx21            0x12     18[42X[13;71Hx23            0x1f8    504[41X
+[Cx24            0x24     36[42X
+[Cx26            0x51     81[42X
+
+
+[Z(B[0;7mc[18;33Hc <print>   (B[m[18;90H(B[0;7m2[18;110HSS C ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 81
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -6
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -6, y is 81, min is 12
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[10;71H(B[0;7mx17            0xffffb7e52ea8   281473766993576                     [10;118H(B[m[11;71H(B[0;7mx19            0xfffffffffffffffb       -5                          [11;113H(B[m[12;71H(B[0;7mx21            0xf      15                                          [12;97H(B[m[13;71H(B[0;7mx23            0x15e    350                                         [13;98H(B[m
+[C(B[0;7mx24            0x19     25                                          [14;28H(B[m
+[C(B[0;7mx26            0x6a     106                                         [15;29H(B[m[18;24H(B[0;7m0[18;33H0 <mincheck>(B[m[18;90H(B[0;7m0[18;110HC ]   [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 106
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -5
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[10;71Hx17            0xffffb7e52ea8   281473766993576[21X[11;71Hx19            0xfffffffffffffffb       -5[26X[12;71Hx21            0xf      15[42X[13;71Hx23            0x15e    350[41X
+[Cx24            0x19     25[42X
+[Cx26            0x6a     106[41X[18;24H(B[0;7mc[18;33Hc <print>   (B[m[18;90H(B[0;7m2[18;110HSS C ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 106
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -5
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -5, y is 106, min is 12
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[H
+[C(B[0;7mx0             0x1d     29                                          [2;28H(B[m[4;71H(B[0;7mx5             0x42102d 4329517                                     [4;102H(B[m[11;71H(B[0;7mx19            0xfffffffffffffffc       -4                          [11;113H(B[m[12;71H(B[0;7mx21            0xc      12                                          [12;97H(B[m[13;71H(B[0;7mx23            0xe0     224                                         [13;98H(B[m
+[C(B[0;7mx24            0x10     16                                          [14;28H(B[m
+[C(B[0;7mx26            0x63     99                                          [15;28H(B[m
+
+
+[Z(B[0;7m0[18;33H0 <mincheck>(B[m[18;90H(B[0;7m0[18;110HC ]   [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 99
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -4
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[H
+[Cx0             0x1d     29[42X[4;71Hx5             0x42102d 4329517[37X[11;71Hx19            0xfffffffffffffffc       -4[26X[12;71Hx21            0xc      12[42X[13;71Hx23            0xe0     224[41X
+[Cx24            0x10     16[42X
+[Cx26            0x63     99[42X
+
+
+[Z(B[0;7mc[18;33Hc <print>   (B[m[18;90H(B[0;7m2[18;110HSS C ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 99
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -4
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -4, y is 99, min is 12
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[H
+[C(B[0;7mx0             0x1c     28                                          [2;28H(B[m[4;71H(B[0;7mx5             0x42102c 4329516                                     [4;102H(B[m[11;71H(B[0;7mx19            0xfffffffffffffffd       -3                          [11;113H(B[m[12;71H(B[0;7mx21            0x9      9                                           [12;96H(B[m[13;71H(B[0;7mx23            0x7e     126                                         [13;98H(B[m
+[C(B[0;7mx24            0x9      9                                           [14;27H(B[m
+[C(B[0;7mx26            0x48     72                                          [15;28H(B[m
+
+
+[Z(B[0;7m0[18;33H0 <mincheck>(B[m[18;90H(B[0;7m0[18;110HC ]   [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 72
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -3
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[H
+[Cx0             0x1c     28[42X[4;71Hx5             0x42102c 4329516[37X[11;71Hx19            0xfffffffffffffffd       -3[26X[12;71Hx21            0x9      9[43X[13;71Hx23            0x7e     126[41X
+[Cx24            0x9      9[43X
+[Cx26            0x48     72[42X
+
+
+[Z(B[0;7mc[18;33Hc <print>   (B[m[18;90H(B[0;7m2[18;110HSS C ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 72
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -3
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -3, y is 72, min is 12
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[11;71H(B[0;7mx19            0xfffffffffffffffe       -2                          [11;113H(B[m[12;71H(B[0;7mx21            0x6      6                                           [12;96H(B[m[13;71H(B[0;7mx23            0x38     56                                          [13;97H(B[m
+[C(B[0;7mx24            0x4      4                                           [14;27H(B[m
+[C(B[0;7mx26            0x25     37                                          [15;28H(B[m
+
+
+[Z(B[0;7m0[18;33H0 <mincheck>(B[m[18;90H(B[0;7m0[18;110HC ]   [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 37
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -2
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[11;71Hx19            0xfffffffffffffffe       -2[26X[12;71Hx21            0x6      6[43X[13;71Hx23            0x38     56[42X
+[Cx24            0x4      4[43X
+[Cx26            0x25     37[42X
+
+
+[Z(B[0;7mc[18;33Hc <print>   (B[m[18;90H(B[0;7m2[18;110HSS C ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 37
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -2
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -2, y is 37, min is 12
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[11;71H(B[0;7mx19            0xffffffffffffffff       -1                          [11;113H(B[m[12;71H(B[0;7mx21            0x3      3                                           [12;96H(B[m[13;71H(B[0;7mx23            0xe      14                                          [13;97H(B[m
+[C(B[0;7mx24            0x1      1                                           [14;27H(B[m
+[C(B[0;7mx26            0x6      6                                           [15;27H(B[m
+
+
+[Z(B[0;7m0[18;33H0 <mincheck>(B[m[18;90H(B[0;7m0[18;110HC ]   [Z(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 6
+[51d[M[74d2: /d $x27 = 12
+[51d[M[74d3: /d $x19 = -1
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[11;71Hx19            0xffffffffffffffff       -1[26X[12;71Hx21            0x3      3[43X[13;71Hx23            0xe      14[42X
+[Cx24            0x1      1[43X
+[Cx26            0x6      6[43X[15;71H(B[0;7mx27            0x6      6                                           [15;96H(B[m[18;24H(B[0;7mc[18;33Hc <print>   (B[m[18;88H(B[0;7m802[18;110HSS N ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 6
+[51d[M[74d2: /d $x27 = 6
+[51d[M[74d3: /d $x19 = -1
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is -1, y is 6, min is 6
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[H
+[C(B[0;7mx0             0x1a     26                                          [2;28H(B[m[4;71H(B[0;7mx5             0x42102a 4329514                                     [4;102H(B[m
+
+
+[C(B[0;7mx10            0x1      1                                           [7;27H(B[m[8;71H(B[0;7mx13            0x6      6                                           [8;96H(B[m[9;71H(B[0;7mx15            0xffffffffeff7   281474976706551                     [9;118H(B[m[11;71H(B[0;7mx19            0x0      0                                           [11;96H(B[m[12;71H(B[0;7mx21            0x0      0                                           [12;96H(B[m[13;71H(B[0;7mx23            0x0      0                                           [13;96H(B[m
+[C(B[0;7mx24            0x0      0                                           [14;27H(B[m
+[C(B[0;7mx26            0xfffffffffffffff7       -9                          [15;44H(B[m[15;71Hx27            0x6      6[43X[18;24H(B[0;7m0[18;33H0 <mincheck>(B[m[18;88H(B[0;7m0      [ EL=0 ]             [18;103H(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = -9
+[51d[M[74d2: /d $x27 = 6
+[51d[M[74d3: /d $x19 = 0
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[H
+[Cx0             0x1a     26[42X[4;71Hx5             0x42102a 4329514[37X
+
+
+[Cx10            0x1      1[43X[8;71Hx13            0x6      6[43X[9;71Hx15            0xffffffffeff7   281474976706551[21X[11;71Hx19            0x0      0[43X[12;71Hx21            0x0      0[43X[13;71Hx23            0x0      0[43X
+[Cx24            0x0      0[43X
+[Cx26            0xfffffffffffffff7       -9[26X[15;71H(B[0;7mx27            0xfffffffffffffff7       -9                          [15;113H(B[m[18;24H(B[0;7mc[18;33Hc <print>   (B[m[18;88H(B[0;7ma0200000       [ EL=0 SS C N ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = -9
+[51d[M[74d2: /d $x27 = -9
+[51d[M[74d3: /d $x19 = 0
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is 0, y is -9, min is -9
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[H
+[C(B[0;7mx0             0x1b     27                                          [2;28H(B[m[4;71H(B[0;7mx5             0x42102b 4329515                                     [4;102H(B[m[6;71H(B[0;7mx9             0x1      1                                           [6;96H(B[m[8;71H(B[0;7mx13            0x9      9                                           [8;96H(B[m[11;71H(B[0;7mx19            0x1      1                                           [11;96H(B[m[12;71H(B[0;7mx21            0xfffffffffffffffd       -3                          [12;113H(B[m[13;71H(B[0;7mx23            0xe      14                                          [13;97H(B[m
+[C(B[0;7mx24            0x1      1                                           [14;27H(B[m
+[C(B[0;7mx26            0x4      4                                           [15;27H(B[m[15;71Hx27            0xfffffffffffffff7       -9[26X[18;24H(B[0;7m0[18;33H0 <mincheck>(B[m[18;88H(B[0;7m0      [ EL=0 ]               [18;103H(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 4
+[51d[M[74d2: /d $x27 = -9
+[51d[M[74d3: /d $x19 = 1
+(gdb) next[51d[3M[73dSingle stepping until exit from function mincheck,
+which has no line number information.
+[50;26H(B[0;7mprint   [139Gc
+(B[m[36;5H0x400620 <mincheck>     cmp    x26, x27[39;5H(B[0;7m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G(B[m[36d   
+
+
+  [25d[36dB+
+
+
+B+>[49d[H
+[Cx0             0x1b     27[42X[4;71Hx5             0x42102b 4329515[37X[6;71Hx9             0x1      1[43X[8;71Hx13            0x9      9[43X[11;71Hx19            0x1      1[43X[12;71Hx21            0xfffffffffffffffd       -3[26X[13;71Hx23            0xe      14[42X
+[Cx24            0x1      1[43X
+[Cx26            0x4      4[43X
+
+
+[Z(B[0;7mc[18;33Hc <print>   (B[m[18;88H(B[0;7m200000[18;102HSS ](B[m[51d[2M[74dBreakpoint 2, 0x000000000040062c in print ()
+[51d[M[74d1: /d $x26 = 4
+[51d[M[74d2: /d $x27 = -9
+[51d[M[74d3: /d $x19 = 1
+(gdb) next[51d[3M[73dSingle stepping until exit from function print,
+which has no line number information.
+x is 1, y is 4, min is -9
+[36d  
+
+
+   [25d[36dB+
+
+
+B+>[44dB+[49d[75d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[44db+[49d[36d  
+
+
+   [44d  [25d[36dB+
+
+
+B+>[49d[50;26H(B[0;7mmincheck[139G0
+(B[m[36;5H(B[0;7m0x400620 <mincheck>     cmp    x26, x27[39;5H(B[m0x40062c <print>        ldr    x0, 0x400658 <exit+16>[140G[36d  
+
+
+   [25d[36dB+>
+
+
+B+[49d[H
+[C(B[0;7mx0             0x1a     26                                          [2;28H(B[m[4;71H(B[0;7mx5             0x42102a 4329514                                     [4;102H(B[m[11;71H(B[0;7mx19            0x2      2                                           [11;96H(B[m[12;71H(B[0;7mx21            0xfffffffffffffffa       -6                          [12;113H(B[m[13;71H(B[0;7mx23            0x38     56                                          [13;97H(B[m
+[C(B[0;7mx24            0x4      4                                           [14;27H(B[m
+[C(B[0;7mx26            0x39     57                                          [15;28H(B[m
+
+
+[Z(B[0;7m0[18;33H0 <mincheck>(B[m[18;88H(B[0;7m0     [18;102H]   [103G(B[m[51d[2M[74dBreakpoint 3, 0x0000000000400620 in mincheck ()
+[51d[M[74d1: /d $x26 = 57
+[51d[M[74d2: /d $x27 = -9
+[51d[M[74d3: /d $x19 = 2
+(gdb) quit[51d[M[75d[51d[4M[71dA debugging session is active.[73;9HInferior 1 [process 20896] will be killed.
+
+Quit anyway? (y or n) y[75;1H[?1049l[?1l>]0;soquresh@csa3:~/Documents/cpsc355/tuts/as1soquresh@csa3:~/Documents/cpsc355/tuts/as1$ exit script
+exit
+bash: exit: script: numeric argument required
+
+Script done on 2018-01-31 00:06:45-0700
