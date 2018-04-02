@@ -1,0 +1,231 @@
+Script started on 2018-04-02 07:48:37-0600
+]0;soquresh@csa2:~/Documents/cpsc355/as5/parta/finalsoquresh@csa2:~/Documents/cpsc355/as5/parta/final$ ./a5a
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Empty stack
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Stack underflow! Cannot pop an empty stack.
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 1
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+1 <-- top of stack
+322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 21211
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 111111
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 44
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 55
+
+Stack overflow! Cannot push value onto stack.
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 55
+
+Stack overflow! Cannot push value onto stack.
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+44 <-- top of stack
+111111
+21211
+1
+322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 44
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 4 3
+111111 <-- top of stack
+21211
+1
+322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 111111
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+21211 <-- top of stack
+1
+322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 21211
+
+Press the return key to continue . . . 2 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 1
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 322
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Stack underflow! Cannot pop an empty stack.
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Empty stack
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 121
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 1
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 1
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 111111
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 111111
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+1 <-- top of stack
+1
+121
+
+Press the return key to continue . . . 
+[3J[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 4
+
+Terminating program
+]0;soquresh@csa2:~/Documents/cpsc355/as5/parta/finalsoquresh@csa2:~/Documents/cpsc355/as5/parta/final$ exit
+exit
+
+Script done on 2018-04-02 07:50:02-0600
