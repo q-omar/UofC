@@ -1,0 +1,9 @@
+Script started on 2018-01-23 10:28:49-0700
+]0;soquresh@csa1:~/Documents/cpsc355/tutorialssoquresh@csa1:~/Documents/cpsc355/tutorials$ echo 233[K[K35[K[K[K355
+355
+]0;soquresh@csa1:~/Documents/cpsc355/tutorialssoquresh@csa1:~/Documents/cpsc355/tutorials$ h[Kcd ..
+]0;soquresh@csa1:~/Documents/cpsc355soquresh@csa1:~/Documents/cpsc355$ cd 3[Ktutorials
+]0;soquresh@csa1:~/Documents/cpsc355/tutorialssoquresh@csa1:~/Documents/cpsc355/tutorials$ exit
+exit
+
+Script done on 2018-01-23 10:29:25-0700
