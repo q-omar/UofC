@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Applied Mathematics 415 - Mathematical Models
 
 ## **Topics covered**
@@ -19,3 +20,6 @@
    - Convolution
    - designing filters
 5. Improper integrals and the method of residues 
+=======
+# UofC
+>>>>>>> 951baf3b35c6f85e5a9180b7c5f5f7c9dfa77103
