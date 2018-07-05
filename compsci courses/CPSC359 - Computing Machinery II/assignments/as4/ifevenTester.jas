@@ -1,0 +1,24 @@
+//Safian Omar Qureshi, ID 10086638
+//IFEVEN branch instruction tester
+
+.constant		
+.end-constant
+.main 
+.var
+.end-var
+
+main:
+    BIPUSH 0x76//enter value to push on top of stack (change to test even/odd)
+    IFEVEN numberEven //pop value on top of stack, check if it is IFEVEN
+    
+    BIPUSH 0x1 //if it is not even, push 1 onto top of stack value
+    goto end //then end program
+
+numberEven:
+    BIPUSH 0x2 //if number is even, push 2 onto top of stack value and end program
+
+
+end:
+    IRETURN
+.end-main
+

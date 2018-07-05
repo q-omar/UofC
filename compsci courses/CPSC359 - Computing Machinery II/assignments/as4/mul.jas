@@ -1,0 +1,142 @@
+//Safian Omar Qureshi, ID 10086638
+//mul(int1,int2) method  
+//Reference used: fibb-rec tutorial example
+
+.constant
+OBJREF 0x40		
+.end-constant
+
+
+
+.main				
+.var //local variables int1, int2 and result after method returns	
+int1
+int2
+.end-var
+
+main:	
+	BIPUSH 0x-9 //push on top of stack value for int1
+	ISTORE int1 //pop value on top of stack and store into local variable int1
+	BIPUSH 0x-9 //push on top of stack value for int2
+	ISTORE int2//pop value on top of stack and store into local variable int2
+
+	LDC_W OBJREF //used for invoking a method
+	ILOAD int1 //push int1 and int2 on top of stack to use as parameters in mul method
+	ILOAD int2
+	INVOKEVIRTUAL mul //gives result in twos complement form on top of stack
+	HALT//we can save the value return in a local variable if required but for now just halt program
+.end-main
+
+
+
+.method mul(int1, int2) //multiplies int1 * int2, pushes result on TOS
+.var //local variables (abs1, abs2, m, c, o, i) from mul algorithm
+abs1
+abs2
+m
+c
+o
+i
+.end-var
+
+
+mul:
+	BIPUSH 0x0
+	ISTORE abs1
+	BIPUSH 0x0
+	ISTORE abs2
+	BIPUSH 0x0			//initialize local variables for now
+	ISTORE m
+	BIPUSH 0x0			
+	ISTORE c
+	BIPUSH 0x0			
+	ISTORE o
+	BIPUSH 0x0			
+	ISTORE i
+	
+
+	ILOAD int1 //pop int1 to stack
+    DUP //duplicate TOS
+	IFLT absInt1 //	//check if int1 is less than 0, pop it and branch to absolute
+
+	ISTORE abs1 //otherwise simply store int1 into abs1
+	GOTO checkInt2 //and then checkint2
+
+absInt1:
+	INEG //pop int1 and then push its negation to stack
+	ISTORE abs1 //pop negation of int1 into abs1
+
+checkInt2:
+	ILOAD int2 //push int2 to stack
+    DUP //duplicate TOS
+	IFLT absInt2 //if less than 0, pop off stack and branch
+
+	ISTORE abs2 //otherwise just pop and store value to abs2
+	GOTO minMax //branch 
+
+absInt2:
+	INEG //pop stack then push its negation
+	ISTORE abs2 //store to abs2
+
+
+
+minMax:
+	ILOAD abs1 //check abs1 - abs2 < 0
+	ILOAD abs2
+	ISUB
+	IFLT minMax2 //if its negative, that means abs2 is greater
+
+minMax1:
+	ILOAD abs1		//if we didnt branch, abs1 is greater so store it as o
+	ISTORE o
+	ILOAD abs2		//abs2 is smaller, store it as c
+	ISTORE c
+	GOTO loop
+
+minMax2:
+	ILOAD abs2		//abs2 is greater, so store it as o
+	ISTORE o
+	ILOAD abs1 		//abs1 is smaller, store it as c
+	ISTORE c
+
+
+
+loop:
+    ILOAD c //push c and i onto stack
+	ILOAD i
+	IF_ICMPEQ return //pop two words from stack, if i=c, branch out of loop
+
+	ILOAD m	//push m and o onto top of stack		
+	ILOAD o
+	IADD //pop two words off stack, push their result
+	ISTORE m //pop result into m
+
+	IINC i 1 //increment i by 1 for loop
+	GOTO loop //loop again until i = c 		
+
+
+
+return:
+	ILOAD	int1 //push int1 to stack, check if negative
+	IFLT return1 //pop top value from stack if it is negative, branch to check int2 negative
+	ILOAD int2 //push int2 to stack to check if it is negative
+	IFLT return2 //pop int2 from stack, branch if negative to make m positive
+	GOTO return3 //if both int1 and int2 are postiive, we can keep m as the same and just return
+
+return1:
+	ILOAD int2 //check if int2 is negative as well
+	IFLT return3 //if it is, return m without negating
+
+return2:
+	ILOAD m //if one of int1 or int2 was positive, we have to negatve m
+    INEG //pop top value from stack, push its negation
+    ISTORE m //pop value, store into m (now m is postive)
+	GOTO return3
+
+return3:
+	ILOAD m	//push m to stack, use it to return to main function
+	IRETURN
+
+	
+.end-method
+

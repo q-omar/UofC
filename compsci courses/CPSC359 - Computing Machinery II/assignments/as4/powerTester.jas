@@ -1,0 +1,113 @@
+//Safian Omar Qureshi, ID 10086638
+//power(int1,int2) method 
+//Reference used: fibb-rec tutorial example
+
+.constant
+OBJREF 0x40			
+.end-constant
+
+
+
+.main 
+.var //local variables int1, int2 to be used in power(int1,int2) 
+int1
+int2				
+.end-var
+
+main:
+    BIPUSH 0x-4 //enter value for int1 (change as required)
+    ISTORE int1
+    BIPUSH 0x4 //enter value for int2 (change as required)
+    ISTORE int2
+
+    LDC_W OBJREF //push object ref to stack
+    ILOAD int1 //push int1, int2 to stack to use as arguments for method
+    ILOAD int2
+    INVOKEVIRTUAL power  //calculates int2 ^ int1, output is in hex stored in TOS. 
+    HALT //we can save the value return in a local variable if required but for now just halt program
+.end-main
+
+
+
+.method power(int1,int2) //returns power of int2^int1 to TOS 
+.var 
+.end-var
+
+power:
+    ILOAD int2 //push into to top of stack
+    BIPUSH 0 //push 0 to top of stack
+    IF_ICMPEQ checkint1 //pop two values, check if they are equal (essentially check if int2 is zero)
+
+    ILOAD int1 //push int1 to top of stack
+    BIPUSH 0 //push 0 to top of stack
+    IF_ICMPEQ returnOne //pop two numbers, check if they are equal (essentially checking if int1 is zero)  
+
+
+performAbsolute:
+    ILOAD int1 //pop int1 to stack
+    DUP //duplicate TOS
+	IFLT absInt1 //	//check if int1 is less than 0, pop it and branch to absolute
+
+	ISTORE int1 //otherwise simply store int1 into int1
+	GOTO checkInt2 //and then checkint2
+
+absInt1:
+	INEG //pop int1 and then push its negation to stack
+	ISTORE int1 //pop negation of int1 into abs1
+
+checkInt2:
+	ILOAD int2 //push int2 to stack
+    DUP //duplicate TOS
+	IFLT absInt2 //if less than 0, pop off stack and branch
+
+	ISTORE int2 //otherwise just pop and store value to int2
+	GOTO calculation //branch 
+
+absInt2:
+	INEG //pop stack then push its negation
+	ISTORE int2 //store to int2
+
+    
+
+calculation:
+    LDC_W OBJREF //load object reference again to call power recursively
+    ILOAD int1 //push int1 to top of stack
+    BIPUSH 1 //subtract by 1
+    ISUB
+    ILOAD int2 //push int2 top of stack
+    INVOKEVIRTUAL power //perform power again
+
+    ILOAD int2 //push int2 to top of stack
+    IMUL //we then have int2 * power(int2, int-1)
+    IRETURN //return back to main 
+
+
+
+checkint1: //if int2 is zero, we have either error case or 0 case
+    ILOAD int1 //check if int1 is less than 0
+    IFLT error //if it is, its an error (0^-int1 results in error)
+    ILOAD int1 //push int1 to TOS again to check if its 0
+    BIPUSH 0
+    IF_ICMPEQ error //pop values to check if zero, if it is its error (0^0 is error)
+    GOTO returnZero //otherwise we have 0^+int which is equal to 0
+
+error:
+    BIPUSH 0xe
+    ERR //print error to console
+    HALT
+
+returnOne: //if we have int2 as nonzero and int1 as 0, we will push 1 to stack 
+    BIPUSH 1 //push 1 to top of stack
+    IRETURN
+
+returnZero:
+    BIPUSH 0 //push 0 to top of stack
+    IRETURN
+
+
+.end-method
+
+
+
+
+
