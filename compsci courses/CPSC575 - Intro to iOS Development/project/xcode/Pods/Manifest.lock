@@ -1,0 +1,64 @@
+PODS:
+  - Alertift (4.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - RxSwiftExt (3.3.0):
+    - RxSwiftExt/Core (= 3.3.0)
+  - RxSwiftExt/Core (3.3.0):
+    - RxSwift (~> 4.0)
+  - SegueManager (4.0.0):
+    - SegueManager/iOS (= 4.0.0)
+    - SegueManager/OSX (= 4.0.0)
+    - SegueManager/R.swift (= 4.0.0)
+  - SegueManager/iOS (4.0.0)
+  - SegueManager/R.swift (4.0.0):
+    - R.swift.Library
+    - SegueManager/iOS
+  - Sluthware (1.0.29)
+
+DEPENDENCIES:
+  - Alertift
+  - R.swift
+  - RxCocoa
+  - RxSwift
+  - RxSwiftExt
+  - SegueManager
+  - SegueManager/R.swift
+  - "Sluthware (from `https://patsluth@bitbucket.org/patsluth/sluthware-swift.git`)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alertift
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+    - SegueManager
+
+EXTERNAL SOURCES:
+  Sluthware:
+    :git: "https://patsluth@bitbucket.org/patsluth/sluthware-swift.git"
+
+CHECKOUT OPTIONS:
+  Sluthware:
+    :commit: 69652d0ca87c7f0779071cfc200d780712c4c3af
+    :git: "https://patsluth@bitbucket.org/patsluth/sluthware-swift.git"
+
+SPEC CHECKSUMS:
+  Alertift: 393ace2617e96e95b4e85c88e80a85bf2d85c698
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxSwiftExt: 81afb48ab0602f503147417baeb3989d64c7687d
+  SegueManager: e4970e6f7150c81ec577e0b61d9fda3f27c11db5
+  Sluthware: 3b0b87ec3af23a6d0953e79d033168ffd4ae1cc0
+
+PODFILE CHECKSUM: c57211f9aca17969f5459107e3e5f66dcd43f483
+
+COCOAPODS: 1.5.3

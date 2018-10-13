@@ -1,0 +1,6 @@
+framework module Pods_LeafBank {
+  umbrella header "Pods-LeafBank-umbrella.h"
+
+  export *
+  module * { export * }
+}

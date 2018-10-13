@@ -1,0 +1,62 @@
+{
+  "name": "Sluthware",
+  "version": "1.0.29",
+  "summary": "Sluthware shared framework",
+  "description": "Sluthware shared framework description",
+  "homepage": "https://sluthware.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "patsluth": "pat.sluth@gmail.com"
+  },
+  "source": {
+    "git": "https://patsluth@bitbucket.org/patsluth/sluthware.git",
+    "tag": "1.0.29"
+  },
+  "social_media_url": "https://twitter.com/patsluth",
+  "platforms": {
+    "ios": "9.0",
+    "osx": "10.11"
+  },
+  "swift_version": "4.2",
+  "ios": {
+    "source_files": [
+      "Sluthware/Classes/*",
+      "Sluthware/Classes/Foundation/*",
+      "Sluthware/Classes/CoreGraphics/*",
+      "Sluthware/Classes/SceneKit/*",
+      "Sluthware/Classes/ARKit/*",
+      "Sluthware/Classes/simd/*",
+      "Sluthware/Classes/CoreLocation/*",
+      "Sluthware/Classes/UIKit/*",
+      "Sluthware/Classes/Reachability/*"
+    ],
+    "frameworks": [
+      "Foundation",
+      "CoreFoundation",
+      "CoreGraphics",
+      "SceneKit",
+      "CoreLocation",
+      "UIKit",
+      "SystemConfiguration"
+    ]
+  },
+  "osx": {
+    "source_files": [
+      "Sluthware/Classes/*",
+      "Sluthware/Classes/Foundation/*",
+      "Sluthware/Classes/CoreGraphics/*",
+      "Sluthware/Classes/CoreLocation/*",
+      "Sluthware/Classes/Reachability/*"
+    ],
+    "frameworks": [
+      "Foundation",
+      "CoreFoundation",
+      "CoreGraphics",
+      "CoreLocation",
+      "SystemConfiguration"
+    ]
+  }
+}
