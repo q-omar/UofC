@@ -12,10 +12,23 @@ target 'LeafBank' do
 	pod 'R.swift'
 	pod 'SegueManager'
 	pod 'SegueManager/R.swift'
-	pod 'Alertift'
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'Firebase'
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Firestore'
 	pod 'RxSwiftExt'
+	pod 'RxFirebaseAuth'
+	pod 'RxFirebase/Auth'
+	pod 'RxFirebase/Firestore'
+	pod 'RxEureka'
+	pod 'PromiseKit'
+	pod 'Alertift'
+	pod 'Eureka'
+    pod 'BoringSSL'
+    pod 'ResearchKit'
 	
 end
 
@@ -30,6 +43,14 @@ post_install do |installer_representation|
 			config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
 			config.build_settings['ENABLE_BITCODE'] = 'NO'
 			config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO'
+			
+			if config.name == 'Release'
+				config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
+			end
+			
+			if target.name == 'R.swift.Library'
+				config.build_settings['SWIFT_VERSION'] = '4.0s'
+			end
 		end
 	end
 end

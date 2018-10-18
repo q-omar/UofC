@@ -14,12 +14,20 @@ import Foundation
 
 public extension UIView
 {
+	@available(*, deprecated, renamed: "constrainTo(view:with:)")
 	public func constrainSizeTo(view: UIView, withEdgeInsets edgeInsets: UIEdgeInsets)
 	{
-		self.topAnchor.constraint(equalTo: view.topAnchor, constant: edgeInsets.top).isActive = true
-		self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: edgeInsets.left).isActive = true
-		self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: edgeInsets.bottom).isActive = true
-		self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: edgeInsets.right).isActive = true
+		self.constrainTo(view: view, with: edgeInsets)
+	}
+	
+	@objc public func constrainTo(view: UIView, with edgeInsets: UIEdgeInsets = UIEdgeInsets.zero)
+	{
+		NSLayoutConstraint.activate([
+			self.topAnchor.constraint(equalTo: view.topAnchor, constant: edgeInsets.top),
+			self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: edgeInsets.left),
+			self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: edgeInsets.bottom),
+			self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: edgeInsets.right),
+			])
 	}
 }
 

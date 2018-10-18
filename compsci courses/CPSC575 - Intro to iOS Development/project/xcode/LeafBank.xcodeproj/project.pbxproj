@@ -8,33 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		2E296D91216F9B29002B1A46 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D8D216F9B29002B1A46 /* ActivitiesViewController.swift */; };
-		2E296D92216F9B29002B1A46 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D8E216F9B29002B1A46 /* ProfileViewController.swift */; };
+		2E296D92216F9B29002B1A46 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D8E216F9B29002B1A46 /* UserViewController.swift */; };
 		2E296D93216F9B29002B1A46 /* MedicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D8F216F9B29002B1A46 /* MedicationsViewController.swift */; };
 		2E296D94216F9B29002B1A46 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D90216F9B29002B1A46 /* StoreViewController.swift */; };
 		2E296D98216F9CC1002B1A46 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D97216F9CC1002B1A46 /* R.generated.swift */; };
 		2E296D9A216F9D38002B1A46 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D99216F9D38002B1A46 /* BaseTabViewController.swift */; };
-		2E296D9C216F9D6E002B1A46 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D9B216F9D6E002B1A46 /* ProfileButton.swift */; };
+		2E296D9C216F9D6E002B1A46 /* UserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E296D9B216F9D6E002B1A46 /* UserButton.swift */; };
 		2E67CFD1216A74CE00431DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67CFD0216A74CE00431DAF /* AppDelegate.swift */; };
 		2E67CFD6216A74CE00431DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E67CFD4216A74CE00431DAF /* Main.storyboard */; };
 		2E67CFD8216A74CF00431DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E67CFD7216A74CF00431DAF /* Assets.xcassets */; };
 		2E67CFDB216A74CF00431DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E67CFD9216A74CF00431DAF /* LaunchScreen.storyboard */; };
+		2EF034102173714A003C7D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF0340F2173714A003C7D6B /* GoogleService-Info.plist */; };
+		2EF0341221737D3C003C7D6B /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0341121737D3C003C7D6B /* UserRegisterViewController.swift */; };
+		2EF3B55121777CC600EE84D6 /* User+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3B55021777CC600EE84D6 /* User+Profile.swift */; };
+		2EF3B5562177809300EE84D6 /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3B5552177809200EE84D6 /* UserDataSource.swift */; };
+		2EF3B55A2177A5C900EE84D6 /* User+Medications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3B5592177A5C900EE84D6 /* User+Medications.swift */; };
 		37A82EDA1B0DC1DCAFA30503 /* Pods_LeafBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AE67C2F1E7B2BAA403FE7B /* Pods_LeafBank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E296D8D216F9B29002B1A46 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
-		2E296D8E216F9B29002B1A46 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2E296D8E216F9B29002B1A46 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2E296D8F216F9B29002B1A46 /* MedicationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationsViewController.swift; sourceTree = "<group>"; };
 		2E296D90216F9B29002B1A46 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		2E296D97216F9CC1002B1A46 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		2E296D99216F9D38002B1A46 /* BaseTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
-		2E296D9B216F9D6E002B1A46 /* ProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		2E296D9B216F9D6E002B1A46 /* UserButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserButton.swift; sourceTree = "<group>"; };
 		2E67CFCD216A74CE00431DAF /* LeafBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeafBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E67CFD0216A74CE00431DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E67CFD5216A74CE00431DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E67CFD7216A74CF00431DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E67CFDA216A74CF00431DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E67CFDC216A74CF00431DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF0340F2173714A003C7D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EF0341121737D3C003C7D6B /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
+		2EF3B55021777CC600EE84D6 /* User+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Profile.swift"; sourceTree = "<group>"; };
+		2EF3B5552177809200EE84D6 /* UserDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
+		2EF3B5592177A5C900EE84D6 /* User+Medications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Medications.swift"; sourceTree = "<group>"; };
 		B7AE67C2F1E7B2BAA403FE7B /* Pods_LeafBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeafBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA884BA29369FC0AE739F4FF /* Pods-LeafBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeafBank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeafBank/Pods-LeafBank.debug.xcconfig"; sourceTree = "<group>"; };
 		C9D2D6252F48F23CB5427829 /* Pods-LeafBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeafBank.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeafBank/Pods-LeafBank.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +85,7 @@
 				2E67CFD0216A74CE00431DAF /* AppDelegate.swift */,
 				2E296D8B216F9AB5002B1A46 /* View Controllers */,
 				2E296D8C216F9ABC002B1A46 /* Views */,
+				2EF3B55221777CCB00EE84D6 /* Data Model */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -86,7 +97,8 @@
 				2E296D8D216F9B29002B1A46 /* ActivitiesViewController.swift */,
 				2E296D8F216F9B29002B1A46 /* MedicationsViewController.swift */,
 				2E296D90216F9B29002B1A46 /* StoreViewController.swift */,
-				2E296D8E216F9B29002B1A46 /* ProfileViewController.swift */,
+				2E296D8E216F9B29002B1A46 /* UserViewController.swift */,
+				2EF0341121737D3C003C7D6B /* UserRegisterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -94,7 +106,7 @@
 		2E296D8C216F9ABC002B1A46 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E296D9B216F9D6E002B1A46 /* ProfileButton.swift */,
+				2E296D9B216F9D6E002B1A46 /* UserButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2E67CFDC216A74CF00431DAF /* Info.plist */,
+				2EF0340F2173714A003C7D6B /* GoogleService-Info.plist */,
 				2E296D97216F9CC1002B1A46 /* R.generated.swift */,
 			);
 			path = "Supporting Files";
@@ -135,6 +148,16 @@
 				2E296D96216F9C6A002B1A46 /* Supporting Files */,
 			);
 			path = LeafBank;
+			sourceTree = "<group>";
+		};
+		2EF3B55221777CCB00EE84D6 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				2EF3B5552177809200EE84D6 /* UserDataSource.swift */,
+				2EF3B55021777CC600EE84D6 /* User+Profile.swift */,
+				2EF3B5592177A5C900EE84D6 /* User+Medications.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		BEAD662704A1616C79ECE568 /* Frameworks */ = {
@@ -216,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E67CFDB216A74CF00431DAF /* LaunchScreen.storyboard in Resources */,
+				2EF034102173714A003C7D6B /* GoogleService-Info.plist in Resources */,
 				2E67CFD8216A74CF00431DAF /* Assets.xcassets in Resources */,
 				2E67CFD6216A74CE00431DAF /* Main.storyboard in Resources */,
 			);
@@ -249,22 +273,50 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LeafBank/Pods-LeafBank-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxEureka/RxEureka.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SegueManager/SegueManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Sluthware/Sluthware.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxEureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SegueManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sluthware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,13 +349,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E296D9A216F9D38002B1A46 /* BaseTabViewController.swift in Sources */,
-				2E296D92216F9B29002B1A46 /* ProfileViewController.swift in Sources */,
+				2E296D92216F9B29002B1A46 /* UserViewController.swift in Sources */,
 				2E67CFD1216A74CE00431DAF /* AppDelegate.swift in Sources */,
-				2E296D9C216F9D6E002B1A46 /* ProfileButton.swift in Sources */,
+				2E296D9C216F9D6E002B1A46 /* UserButton.swift in Sources */,
 				2E296D91216F9B29002B1A46 /* ActivitiesViewController.swift in Sources */,
 				2E296D93216F9B29002B1A46 /* MedicationsViewController.swift in Sources */,
+				2EF0341221737D3C003C7D6B /* UserRegisterViewController.swift in Sources */,
 				2E296D94216F9B29002B1A46 /* StoreViewController.swift in Sources */,
+				2EF3B55121777CC600EE84D6 /* User+Profile.swift in Sources */,
 				2E296D98216F9CC1002B1A46 /* R.generated.swift in Sources */,
+				2EF3B5562177809300EE84D6 /* UserDataSource.swift in Sources */,
+				2EF3B55A2177A5C900EE84D6 /* User+Medications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +507,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KZ3284WPA2;
+				DEVELOPMENT_TEAM = 5Y8BLZ7P9T;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/LeafBank/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +527,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KZ3284WPA2;
+				DEVELOPMENT_TEAM = 5Y8BLZ7P9T;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/LeafBank/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

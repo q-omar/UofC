@@ -14,6 +14,7 @@ import Foundation
 
 public extension UIViewController
 {
+	@available(*, deprecated: 9.0, message: "Use -[UIViewController prefersStatusBarHidden]")
 	var isStatusBarHidden: Bool {
 		set
 		{

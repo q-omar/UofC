@@ -16,6 +16,17 @@ import UIKit
 public extension UINavigationBar
 {
 	@available(iOS 11.0, *)
+	public var contentView: UIView? {
+		for subview in self.subviews {
+			if NSClassFromString("_UINavigationBarContentView") === type(of: subview) {
+				return subview
+			}
+		}
+		
+		return nil
+	}
+	
+	@available(iOS 11.0, *)
 	public var largeTitleView: UIView? {
 		for subview in self.subviews {
 			if NSClassFromString("_UINavigationBarLargeTitleView") === type(of: subview) {

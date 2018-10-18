@@ -21,8 +21,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
+    
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
@@ -31,8 +40,37 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
+    /// Image `icons8-gift-64`.
+    static let icons8Gift64 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-gift-64")
+    /// Image `icons8-herbal-medicine-64`.
+    static let icons8HerbalMedicine64 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-herbal-medicine-64")
+    /// Image `icons8-treatment-64`.
+    static let icons8Treatment64 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-treatment-64")
+    /// Image `storeSample`.
+    static let storeSample = Rswift.ImageResource(bundle: R.hostingBundle, name: "storeSample")
+    
+    /// `UIImage(named: "icons8-gift-64", bundle: ..., traitCollection: ...)`
+    static func icons8Gift64(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Gift64, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icons8-herbal-medicine-64", bundle: ..., traitCollection: ...)`
+    static func icons8HerbalMedicine64(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8HerbalMedicine64, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icons8-treatment-64", bundle: ..., traitCollection: ...)`
+    static func icons8Treatment64(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Treatment64, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "storeSample", bundle: ..., traitCollection: ...)`
+    static func storeSample(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.storeSample, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -46,8 +84,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
+    /// This struct is generated for `UserViewController`, and contains static references to 1 segues.
+    struct userViewController {
+      /// Segue identifier `UserRegisterViewController`.
+      static let userRegisterViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, UserViewController, UserRegisterViewController> = Rswift.StoryboardSegueIdentifier(identifier: "UserRegisterViewController")
+      
+      /// Optionally returns a typed version of segue `UserRegisterViewController`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func userRegisterViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, UserViewController, UserRegisterViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.userViewController.userRegisterViewController, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -117,14 +170,18 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Main"
-      let profileViewController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "ProfileViewController")
+      let userViewController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "UserViewController")
       
-      func profileViewController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: profileViewController)
+      func userViewController(_: Void = ()) -> UIKit.UINavigationController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userViewController)
       }
       
       static func validate() throws {
-        if _R.storyboard.main().profileViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'profileViewController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
+        if UIKit.UIImage(named: "icons8-herbal-medicine-64") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icons8-herbal-medicine-64' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icons8-gift-64") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icons8-gift-64' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icons8-treatment-64") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icons8-treatment-64' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "storeSample") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'storeSample' is used in storyboard 'Main', but couldn't be loaded.") }
+        if _R.storyboard.main().userViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userViewController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
       }
       
       fileprivate init() {}

@@ -44,7 +44,7 @@
         <!--Profile-->
         <scene sceneID="FwK-xS-hjU">
             <objects>
-                <viewController id="LE9-Cw-LT6" customClass="ProfileViewController" customModule="LeafBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LE9-Cw-LT6" customClass="UserViewController" customModule="LeafBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M3n-VP-F0V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,10 +58,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="u04-jR-4XX" kind="show" identifier="UserRegisterViewController" id="scD-R0-XBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnm-pu-eBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1276" y="1485"/>
+            <point key="canvasLocation" x="-1276" y="1484.7076461769116"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VDV-la-cSJ">
@@ -71,6 +74,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="8g8-lq-03c" kind="relationship" relationship="viewControllers" id="m4Q-Ih-pIp"/>
@@ -90,20 +98,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMB-Sk-EKX">
-                                <rect key="frame" x="133.5" y="323" width="108" height="21"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storeSample" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-c2-8IT">
+                                <rect key="frame" x="0.0" y="116" width="375" height="508"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sEK-c2-8IT" secondAttribute="height" multiplier="375:508" id="4LH-J5-f9P"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iMB-Sk-EKX" firstAttribute="centerX" secondItem="S2o-9D-hjA" secondAttribute="centerX" id="YqN-fs-krB"/>
-                            <constraint firstItem="iMB-Sk-EKX" firstAttribute="centerY" secondItem="S2o-9D-hjA" secondAttribute="centerY" id="o7h-07-hZs"/>
+                            <constraint firstItem="sEK-c2-8IT" firstAttribute="leading" secondItem="Q1p-Zc-fd4" secondAttribute="leading" id="4Xd-6p-yEe"/>
+                            <constraint firstItem="sEK-c2-8IT" firstAttribute="top" secondItem="Q1p-Zc-fd4" secondAttribute="top" id="4nj-pE-a0q"/>
+                            <constraint firstItem="sEK-c2-8IT" firstAttribute="trailing" secondItem="Q1p-Zc-fd4" secondAttribute="trailing" id="e1N-zp-kHw"/>
+                            <constraint firstAttribute="bottom" secondItem="sEK-c2-8IT" secondAttribute="bottom" constant="43" id="wn9-jF-R5k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q1p-Zc-fd4"/>
                     </view>
@@ -117,7 +124,7 @@
         <scene sceneID="ood-pj-HmM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8g8-lq-03c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" id="Fl6-zM-fss"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="icons8-treatment-64" landscapeImage="icons8-treatment-64" largeContentSizeImage="icons8-treatment-64" id="Fl6-zM-fss"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="uG2-7q-rdE">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -136,7 +143,7 @@
         <scene sceneID="KeK-sd-mmj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KPd-ny-nJq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Medications" id="WKq-cE-rn9"/>
+                    <tabBarItem key="tabBarItem" title="Medications" image="icons8-herbal-medicine-64" landscapeImage="icons8-herbal-medicine-64" largeContentSizeImage="icons8-herbal-medicine-64" id="WKq-cE-rn9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3q1-Fq-MhA">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -155,7 +162,7 @@
         <scene sceneID="K7P-pl-IxU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gdD-jn-Ukd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Store" id="h3a-m3-Nud"/>
+                    <tabBarItem key="tabBarItem" title="Store" image="icons8-gift-64" landscapeImage="icons8-gift-64" largeContentSizeImage="icons8-gift-64" id="h3a-m3-Nud"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="pfz-rr-p0c">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -173,7 +180,7 @@
         <!--Navigation Controller-->
         <scene sceneID="TmK-Pz-EO0">
             <objects>
-                <navigationController storyboardIdentifier="ProfileViewController" automaticallyAdjustsScrollViewInsets="NO" id="ag1-h8-cf4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UserViewController" automaticallyAdjustsScrollViewInsets="NO" id="ag1-h8-cf4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rNq-tS-2dq">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -188,5 +195,33 @@
             </objects>
             <point key="canvasLocation" x="-2215" y="1485"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="MaC-gv-9ja">
+            <objects>
+                <viewController id="u04-jR-4XX" customClass="UserRegisterViewController" customModule="LeafBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GL4-OM-vha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4jh-3V-Ijr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="dcx-gg-WUe">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="GI1-gr-ULS">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="u04-jR-4XX" id="r7s-0S-oVp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU0-NX-Mvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="1485"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icons8-gift-64" width="48" height="48"/>
+        <image name="icons8-herbal-medicine-64" width="48" height="48"/>
+        <image name="icons8-treatment-64" width="48" height="48"/>
+        <image name="storeSample" width="750" height="1136"/>
+    </resources>
 </document>

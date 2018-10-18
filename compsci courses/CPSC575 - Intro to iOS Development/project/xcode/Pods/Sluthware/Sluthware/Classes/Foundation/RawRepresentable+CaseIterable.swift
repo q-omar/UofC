@@ -34,6 +34,17 @@ public extension RawRepresentable
 	Self: Equatable,
 	Self.AllCases == [Self]
 {
+	init?(index: Int)
+	{
+		if let _case = Self.allCases[safe: index] {
+			self = _case
+		} else {
+			return nil
+		}
+	}
+	
+	
+	
 	func nextCase(wrapped: Bool = false) -> Self?
 	{
 		guard let index = Self.allCases.firstIndex(of: self) else { return nil }
@@ -55,6 +66,10 @@ public extension RawRepresentable
 			return (wrapped) ? Self.allCases.last : nil
 		}
 	}
+	
+	
+	
+	
 	
 	postfix static func + (lhs: Self) -> Self
 	{
@@ -93,7 +108,6 @@ public extension RawRepresentable
 		guard let prevCase = lhs.prevCase(wrapped: false) else { return }
 		lhs = prevCase
 	}
-	
 	
 	
 	
