@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Payroll - Employees</title>
+		<link rel="stylesheet" type="text/css" href="styles/subpage.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="sidebar">
+				<a href="home.html">Home</a>
+				<a href="users.html">Users</a>
+				<a href="employees.html">Employees</a>
+				<a href="salaries.html">Salaries</a>
+				<a href="bonuses.html">Bonuses</a>
+				<a href="benefits.html">Benefits</a>
+				<a href="deductions.html">Deductions</a>
+				<a href="reports.html">Reports</a>
+			</div>
+			<div class="center">
+				<div class="table">
+					<h1>EMPLOYEES</h1>
+					<table id="employees">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div class="add-form">
+					<h2>Add an Employee</h2>
+					<form id="addEmployee" onsubmit="return addEmployee()">
+						<label for="user-sin">SIN:</label>
+						<input id="user-sin" type="text" pattern="[0-9]{9}" required>
+
+						<label for="user-fname">First Name:</label>
+						<input id="user-fname" type="text" required>
+
+						<label for="user-lname">Last Name:</label>
+						<input id="user-lname" type="text" required>
+
+						<label for="user-phone">Phone # (XXX-XXX-XXXX):</label>
+						<input id="user-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+						<label for="employee-minordeps">Number of Minor Dependents:</label>
+						<input id="employee-minordeps" type="number" required>
+
+						<label for="employee-sex">Sex:</label>
+						<select id="employee-sex" required>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+
+						<input type="submit">
+					</form>
+					<h2>Assign a Salary</h2>
+					<form onsubmit="return addSalary()">
+						<label for="salary-sin">Recipient SIN:</label>
+						<input id="salary-sin" type="text" pattern="[0-9]{9}" required>
+
+						<label for="salary-amount">Amount:</label>
+						<input id="salary-amount" type="number" required>
+
+						<label for="salary-frequency">Frequency:</label>
+						<select id ="salary-frequency" required>
+							<option value = "Monthly">Monthly</option>
+							<option value = "Bi-Monthly">Bi-Monthly</option>
+							<option value = "Weekly">Weekly</option>
+						</select>
+
+						<input type="submit">
+					</form>
+				</div>
+				<div class="edit-form">
+					<h2>Edit an Employee</h2>
+					<form onsubmit="return editEmployee()">
+						<label for="employee-sin-edit">Enter the SIN number of the employee you want to edit:</label>
+						<input id="employee-sin-edit" type="text" pattern="[0-9]{9}" required>
+
+						<label for="employee-minordeps-edit">Number of Minor Dependents:</label>
+						<input id="employee-minordeps-edit" type="number" required>
+
+						<label for="employee-sex-edit">Sex:</label>
+						<select id="employee-sex-edit" required>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select>
+
+						<input type="submit">
+					</form>
+				</div>
+				<div class="delete-form">
+					<h2>Delete an Employee</h2>
+					<form onsubmit="return deleteEmployee()">
+						<label for="employee-sin-delete">Enter the SIN number of the employee you want to delete:</label>
+						<input id="employee-sin-delete" type="text" pattern="[0-9]{9}" required>
+
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+			<div class="functions">
+				<a href="javascript:void(0);" onclick="expandForm('add')">Add an Employee</a>
+				<a href="javascript:void(0);" onclick="expandForm('edit')">Edit an Employee</a>
+				<a href="javascript:void(0);" onclick="expandForm('delete')">Delete an Employee</a>
+			</div>
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="scripts/functions.js"></script>
+		<script>
+			let loggedIn = sessionStorage.getItem('loggedIn');
+			if (loggedIn !== 'true'){
+				document.location.href='index.html';
+			}
+			if (userType !== 'employer'){
+				document.location.href='view.html';
+			}
+			let socket2 = io();
+			socket2.emit('list employees');
+			socket2.on('employee list', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#employees thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#employees tbody').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#employees tbody').append('<td>' + row[key] + '</td>');
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

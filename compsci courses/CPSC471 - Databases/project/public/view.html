@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Payroll - View</title>
+		<link rel="stylesheet" type="text/css" href="styles/subpage.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="sidebar">
+				<a href="#">Employee Information</a>
+			</div>
+			<div class="center">
+				<div class="table">
+					<h1>EMPLOYEE INFORMATION</h1>
+					<h2>Personal Information</h2>
+					<table id="personal">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+					<br>
+					<br>
+					<h2>Net Salary (after benefits and deductions)</h2>
+					<table style="width: 30%;" id="net">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+					<br>
+					<br>
+					<div style="display: flex; flex-direction: row">
+						<table style="width: 30%;" id="base">
+							<caption>Base Salary</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+						<table style="width: 30%;" id="benefits">
+							<caption>Benefits</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+						<table style="width: 30%;" id="deductions">
+							<caption>Deductions</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="scripts/functions.js"></script>
+		<script>
+			let loggedIn = sessionStorage.getItem('loggedIn');
+			if (loggedIn !== 'true'){
+				document.location.href='index.html';
+			}
+			if (userType !== 'employee'){
+				document.location.href='home.html';
+			}
+			let socket2 = io();
+			socket2.emit('view personal info', employeeID);
+			socket2.emit('view net salary', employeeID);
+			socket2.emit('view base salary', employeeID);
+			socket2.emit('view benefits', employeeID);
+			socket2.emit('view deductions', employeeID);
+			socket2.on('personal', function(data) {
+				var headings = data[0];
+				for (var heading in headings){
+					$('#personal thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in data) {
+					$('#personal').append('<tr>');
+					var row = data[i];
+					for (var key in row) {
+						$('#personal tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.on('net', function(data) {
+				var headings = data[0];
+				for (var heading in headings){
+					$('#net thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in data) {
+					$('#net').append('<tr>');
+					var row = data[i];
+					for (var key in row) {
+						$('#net tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.on('base', function(data) {
+				var headings = data[0];
+				for (var heading in headings){
+					$('#base thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in data) {
+					$('#base').append('<tr>');
+					var row = data[i];
+					for (var key in row) {
+						$('#base tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.on('benefits', function(data) {
+				var headings = data[0];
+				for (var heading in headings){
+					$('#benefits thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in data) {
+					$('#benefits').append('<tr>');
+					var row = data[i];
+					for (var key in row) {
+						$('#benefits tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.on('deductions', function(data) {
+				var headings = data[0];
+				for (var heading in headings){
+					$('#deductions thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in data) {
+					$('#deductions').append('<tr>');
+					var row = data[i];
+					for (var key in row) {
+						$('#deductions tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+		</script>
+	</body>
+</html>

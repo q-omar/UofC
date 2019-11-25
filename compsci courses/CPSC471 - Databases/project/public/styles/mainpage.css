@@ -1,0 +1,54 @@
+body {
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+}
+
+.main {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main .sidebar {
+    background-color: black;
+    text-align: center;
+    flex: 1 1 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    order: 1;
+}
+
+.main .sidebar a {
+    padding: 1.7vh 0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: darkgray;
+    display: block;
+}
+
+.main .sidebar a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.main .title {
+    text-align: center;
+    background-color: whitesmoke;
+    flex: 1 1 85%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

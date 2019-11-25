@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Payroll - Home</title>
+		<link rel="stylesheet" type="text/css" href="styles/mainpage.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="sidebar">
+				<a href="home.html">Home</a>
+				<a href="users.html">Users</a>
+				<a href="employees.html">Employees</a>
+				<a href="salaries.html">Salaries</a>
+				<a href="bonuses.html">Bonuses</a>
+				<a href="benefits.html">Benefits</a>
+				<a href="deductions.html">Deductions</a>
+				<a href="reports.html">Reports</a>
+			</div>
+			<div class="title">
+				<h1>CPSC 471 - Payroll System</h1>
+				<h2 id="companyID"></h2>
+				<h2 id="userType"></h2>
+			</div>
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="scripts/functions.js"></script>
+		<script>
+			let loggedIn = sessionStorage.getItem('loggedIn');
+			if (loggedIn !== 'true'){
+				document.location.href='index.html';
+			}
+			if (userType !== 'employer'){
+				document.location.href='view.html';
+			}
+			document.getElementById('companyID').innerHTML += 'Company ID: ' + companyID;
+			if (userType === 'employer'){
+				document.getElementById('userType').innerHTML += 'Your Employer License Number: ' + employerLic;
+			}
+			else {
+				document.getElementById('userType').innerHTML += 'Your Employee ID: ' + employeeID;
+			}
+		</script>
+	</body>
+</html>

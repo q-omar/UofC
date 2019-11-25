@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Payroll - Deductions</title>
+		<link rel="stylesheet" type="text/css" href="styles/subpage.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="sidebar">
+				<a href="home.html">Home</a>
+				<a href="users.html">Users</a>
+				<a href="employees.html">Employees</a>
+				<a href="salaries.html">Salaries</a>
+				<a href="bonuses.html">Bonuses</a>
+				<a href="benefits.html">Benefits</a>
+				<a href="deductions.html">Deductions</a>
+				<a href="reports.html">Reports</a>
+			</div>
+			<div class="center">
+				<div class="table">
+					<h1>DEDUCTIONS</h1>
+					<table id="deductions">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div class="edit-form">
+					<h2>Edit a Deduction</h2>
+					<form onsubmit="return editDeduction()">
+						<label for="deduction-salaryID-edit">Enter the Salary ID of the deduction you want to edit:</label>
+						<input id="deduction-salaryID-edit" type="number" required>
+
+						<label for="deduction-tax-edit">Tax Amount:</label>
+						<input id="deduction-tax-edit" type="number" required>
+
+						<label for="deduction-ei-edit">Employment Insurance Amount:</label>
+						<input id="deduction-ei-edit" type="number" required>
+
+						<label for="deduction-union-edit">Union Dues:</label>
+						<input id="deduction-union-edit" type="number" required>
+
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+			<div class="functions">
+				<a href="javascript:void(0);" onclick="expandForm('edit')">Edit a Deduction</a>
+			</div>
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="scripts/functions.js"></script>
+		<script>
+			let loggedIn = sessionStorage.getItem('loggedIn');
+			if (loggedIn !== 'true'){
+				document.location.href='index.html';
+			}
+			if (userType !== 'employer'){
+				document.location.href='view.html';
+			}
+			let socket2 = io();
+			socket2.emit('list deductions');
+			socket2.on('deduction list', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#deductions thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#deductions tbody').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#deductions tbody').append('<td>' + row[key] + '</td>');
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

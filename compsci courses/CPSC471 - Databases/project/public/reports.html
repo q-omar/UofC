@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Payroll - Reports</title>
+		<link rel="stylesheet" type="text/css" href="styles/subpage.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="sidebar">
+				<a href="home.html">Home</a>
+				<a href="users.html">Users</a>
+				<a href="employees.html">Employees</a>
+				<a href="salaries.html">Salaries</a>
+				<a href="bonuses.html">Bonuses</a>
+				<a href="benefits.html">Benefits</a>
+				<a href="deductions.html">Deductions</a>
+				<a href="reports.html">Reports</a>
+			</div>
+			<div class="center">
+				<div class="table">
+					<h1>REPORTS</h1>
+					<h2>Due at the end of the month</h2>
+					<table id="month">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+<!--					<h2>Due at the end of the fortnight</h2>-->
+<!--					<table id="bi-month">-->
+<!--						<thead></thead>-->
+<!--						<tbody></tbody>-->
+<!--					</table>-->
+<!--					<h2>Due at the end of the week</h2>-->
+<!--					<table id="week">-->
+<!--						<thead></thead>-->
+<!--						<tbody></tbody>-->
+<!--					</table>-->
+					<h2>A list of your employees with their net annual salaries</h2>
+					<table id="netSalary">
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+					<br>
+					<h2>Stats</h2>
+					<div style="display: flex; flex-direction: row;">
+						<table style="width: 40%;" id="netSalaryStats">
+							<caption>Sum and Average</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+						<table style="width: 20%;" id="averageBySex">
+							<caption>Average by sex</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="edit-form">
+					<h2>Edit a User</h2>
+					<form onsubmit="return editUser()">
+						<label for="user-sin-edit">Enter the SIN number of the user you want to edit:</label>
+						<input id="user-sin-edit" type="text" pattern="[0-9]{9}" required>
+
+						<label for="user-fname-edit">First Name:</label>
+						<input id="user-fname-edit" type="text" required>
+
+						<label for="user-lname-edit">Last Name:</label>
+						<input id="user-lname-edit" type="text" required>
+
+						<label for="user-phone-edit">Phone #:</label>
+						<input id="user-phone-edit" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+			<div class="functions">
+			</div>
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="scripts/functions.js"></script>
+		<script>
+			let loggedIn = sessionStorage.getItem('loggedIn');
+			if (loggedIn !== 'true'){
+				document.location.href='index.html';
+			}
+			if (userType !== 'employer'){
+				document.location.href='view.html';
+			}
+			let socket2 = io();
+			socket2.emit('list net salaries');
+			socket2.on('net salaries', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#netSalary thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#netSalary').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#netSalary tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.emit('get salary stats');
+			socket2.on('salary stats', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#netSalaryStats thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#netSalaryStats').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#netSalaryStats tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.emit('get average by sex');
+			socket2.on('average by sex', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#averageBySex thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#averageBySex').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#averageBySex tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+			socket2.emit('due this month', 'Monthly', 12);
+			socket2.on('due this month', function(users) {
+				var headings = users[0];
+				for (var heading in headings){
+					$('#month thead').append('<th>' + heading + '</th>');
+				}
+				for (var i in users) {
+					$('#month').append('<tr>');
+					var row = users[i];
+					for (var key in row) {
+						$('#month tbody').append('<td>' + row[key] + '</td>');
+					}
+					// $('#users').append('</tr>');
+				}
+			});
+		</script>
+	</body>
+</html>

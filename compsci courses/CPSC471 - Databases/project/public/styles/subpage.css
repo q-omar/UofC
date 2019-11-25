@@ -1,0 +1,135 @@
+body {
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+}
+
+h2, caption {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+.main {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main .sidebar {
+    background-color: black;
+    text-align: center;
+    flex: 1 1 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 1;
+}
+
+.main .sidebar a {
+    padding: 1.7vh 0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: darkgray;
+    display: block;
+}
+
+.main .sidebar a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.main .center {
+    /*overflow-y: scroll;*/
+    text-align: center;
+    flex: 1 1 70%;
+    order: 2;
+}
+
+.center .table {
+    min-height: 100vh;
+}
+
+.add-form, .edit-form, .delete-form {
+    font-family: Arial, sans-serif;
+    display: none;
+    border: 6px solid black;
+    padding: 2em;
+    width: 400px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%)
+}
+
+input, select {
+    margin: .8em auto;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: inherit;
+    display: block;
+    width: 280px;
+    padding: .4em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+}
+
+th {
+    font-family: Arial, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    height: 50px;
+    color: indianred;
+    background-color: #111111;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr, td {
+    font-family: Arial, Arial, sans-serif;
+    font-size: 1em;
+    height: 27px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: darkgray;
+}
+
+.main .functions {
+    background-color: black;
+    text-align: center;
+    flex: 1 1 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 3;
+}
+
+.main .functions a {
+    padding: 1.7vh 0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: indianred;
+    display: block;
+}
+
+.main .functions a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
