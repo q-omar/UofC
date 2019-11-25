@@ -1,0 +1,194 @@
+.dashboard-page {
+
+    height: calc(100vh - 58px); // remove height from navbar
+    background-color: white;
+    display: flex;
+
+    .sidebar {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        background-color: #AAA;
+
+        .courses {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .course-info {
+            width: 100%;
+            background: paleturquoise;
+            margin: 0 0 10px 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus,
+            &:checked {
+                background-color: #83DFDB;
+            }
+            
+            h5 {
+                margin-top: 0.5rem;
+            }
+        }
+
+        .bottom-section {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            background-color: #333;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+
+            button {
+                background-color: transparent;
+                border-color: transparent;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                img {
+                    width: 48px;
+                }
+            }
+        }
+    }
+
+    .discussion-thread {
+        width: 25%;
+        height: 100%;
+        display: none; // JS will make this to display: flex
+        flex-direction: column;
+        border-left: 1px solid #AAA;
+
+        h4 {
+            margin: 1rem 2rem;
+        }
+
+        .thread {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .comment-wrapper {
+            padding: 0.5rem 2rem;
+            background: #3ED2CC;
+            margin: 1rem 2rem;
+            text-align: left;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .message {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .upvote-btn {
+                width: 32px;
+                height: 48px;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .upvote-num {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .bottom-section {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            background-color: #333;
+            height: 150px;
+            display: flex;
+            z-index: 999;
+
+            .comment-box {
+                height: 100%;
+                width: 100%;
+                padding: 0.5rem;
+                
+                textarea {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 30px;
+                    padding: 1rem;
+                    resize: none;
+                }
+            }
+            button { 
+                width: 80px;
+                height: 70px;
+                border-radius: 40px;
+                background: paleturquoise;
+                border-color: transparent;
+                
+                &:hover {
+                    cursor: pointer;
+                }
+            }             
+        }
+    }
+}
+
+#question-containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //border: 1px black solid;
+    //margin: 0 auto;
+}
+
+.qcontainer{
+    width: 15vw;
+    margin: auto;
+}
+
+#add-course-form {
+    padding: 15px;
+
+    label {
+        max-width: 300px;
+        margin: 1rem auto;    
+    }
+
+    input {
+        height: 32px;
+    }
+
+    .input-block {
+        text-align: center;
+    }
+
+    .course-code {
+
+        h5 {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+        }
+
+        #course-code-input {
+            text-align: center;
+        }
+    }
+}
