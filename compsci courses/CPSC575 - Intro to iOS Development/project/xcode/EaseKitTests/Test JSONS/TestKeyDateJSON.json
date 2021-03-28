@@ -1,0 +1,14 @@
+ [
+  {
+  "ConnectId": 195,
+  "DateTypeId": 1,
+  "InterventionDate": "2018-06-20T00:00:00",
+  "ProgramId": 86
+  },
+  {
+  "ConnectId": 195,
+  "DateTypeId": 2,
+  "InterventionDate": "2018-07-01T00:00:00",
+  "ProgramId": 86
+  }
+  ]

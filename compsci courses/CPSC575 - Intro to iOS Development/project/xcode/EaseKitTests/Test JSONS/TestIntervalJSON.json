@@ -1,0 +1,32 @@
+ [
+  {
+  "OpenBefore": false,
+  "Id": 1,
+  "OpenUnitTypeId": 2,
+  "OpenCount": 0,
+  "CloseUnitTypeId": 3,
+  "CloseCount": 1,
+  "DateTypeId": 1,
+  "SurveyId": 0
+  },
+  {
+  "OpenBefore": false,
+  "Id": 2,
+  "OpenUnitTypeId": 2,
+  "OpenCount": 0,
+  "CloseUnitTypeId": 3,
+  "CloseCount": 1,
+  "DateTypeId": 1,
+  "SurveyId": 1
+  },
+  {
+  "OpenBefore": true,
+  "Id": 3,
+  "OpenUnitTypeId": 2,
+  "OpenCount": 10,
+  "CloseUnitTypeId": 2,
+  "CloseCount": 15,
+  "DateTypeId": 1,
+  "SurveyId": 1
+  }
+  ]
